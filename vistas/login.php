@@ -1,7 +1,10 @@
 <?php 
-    include('./componentes/head-link.php');
+    include('./componentes/head.php');
     include('./componentes/link.php');
-    include('./componentes/fondo.php')
+    include('./componentes/background.php');
+    componenteHead('Login');
+    componenteLink();
+    componenteBackground();
 ?>
 
 <body>
