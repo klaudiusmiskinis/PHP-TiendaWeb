@@ -1,11 +1,8 @@
-<?php include('./componentes/head-link.php')?>
-
-<div class="background">
-   <span></span>
-   <span></span>
-   <span></span>
-   <span></span>
-</div>
+<?php 
+    include('./componentes/head-link.php');
+    include('./componentes/link.php');
+    include('./componentes/fondo.php')
+?>
 
 <body>
     <div class="container-fluid">
@@ -17,7 +14,7 @@
                         <p class="text-muted">¡Introduce tu nombre de usuario y contraseña!</p> 
                         <input class="mt-2 shadow-sm form-control" type="text" name="nombre" placeholder="Nombre de usuario" autocomplete="off" required> 
                         <input class="mt-3 shadow-sm form-control" type="password" name="password" placeholder="Contraseña" autocomplete="off" required> 
-                        <input class="mt-3 shadow-sm text-center btn btn-secondary" type="submit" value="Login" href="#">
+                        <input class="mt-3 shadow-sm text-center btn" type="submit" value="Login" href="#">
                         <div class="col-md-12">
                             <ul class="social-network social-circle">
                             </ul>
