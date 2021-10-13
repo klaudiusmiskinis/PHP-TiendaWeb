@@ -1,0 +1,27 @@
+.form-control {
+    transition: 0.5s;
+}
+
+.form-control:focus {
+    background-color: var(--principal);
+    border-color: var(--b);
+    color: var(--b);
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    transition: 0.5s !important;
+}
+
+.form-control:hover {
+    background-color: var(--principal);
+    border-color: var(--b);
+    color: var(--b);
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.btn {
+    background-color: var(--principal);
+    color: var(--b);
+}
+
+.btn:hover {
+    color: grey;
+}
