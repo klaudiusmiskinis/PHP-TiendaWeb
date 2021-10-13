@@ -20,8 +20,10 @@
 .btn {
     background-color: var(--principal);
     color: var(--b);
+    transition: 0.5s !important;
 }
 
 .btn:hover {
-    color: grey;
+    color: rgb(181, 181, 181);
+    transition: 0.5s !important;
 }
