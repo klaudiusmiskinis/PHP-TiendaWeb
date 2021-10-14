@@ -1,6 +1,6 @@
 $('#container-register').hide();
 $('#container-login').hide();
-$('#container-register').slideDown("slow");
+$('#container-login').slideDown("slow");
 
 //CLICK FUNCIONES
 $("#btn-to-register").click(function() {
