@@ -13,7 +13,7 @@
         $email = mysqli_real_escape_string($con, $email);  
         $password = mysqli_real_escape_string($con, $password);
 
-        $sql = "SELECT * FROM usuario WHERE (email = '$email') AND (password = '$password')";
+        $sql = "SELECT * FROM usuario WHERE  (email = '$email') AND (password = '$password')";
         $result = $con->query($sql);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
@@ -23,11 +23,9 @@
                 $_SESSION['rol'] = $row['rol'];
             }
         } else {
-            $url = '../vistas/index.php';
-            header('Location: '.$url.'?error=incorrecto');
+            $url = '../vistas/index.php?error=incorrecto';
         }
         $con->close();
-        $url = '../vistas/perfil.php';
         header('Location: '.$url);
     } 
 ?>
