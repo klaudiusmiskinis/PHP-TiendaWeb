@@ -3,5 +3,5 @@
     include('../componentes/head.php');
     include('../componentes/background.php');
     componenteHead('Perfil');
-    componenteBackground()
+    // componenteBackground()
 ?>
