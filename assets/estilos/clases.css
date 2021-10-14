@@ -27,3 +27,10 @@
     color: rgb(181, 181, 181);
     transition: 0.5s !important;
 }
+
+.btn-outline-dark {
+    border: 1px solid var(--principal) !important;
+    color: var(--principal) !important;
+    transition: 0.5s !important;
+    background-color: var(--b) !important;
+}
