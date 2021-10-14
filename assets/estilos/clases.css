@@ -29,8 +29,14 @@
 }
 
 .btn-outline-dark {
-    border: 1px solid var(--principal) !important;
+    border-radius: 0.25rem;
+    border: 1px solid transparent !important;
     color: var(--principal) !important;
     transition: 0.5s !important;
     background-color: var(--b) !important;
+}
+
+.btn-outline-dark:hover {
+    color: var(--b) !important;
+    background-color: var(--principal) !important;
 }
