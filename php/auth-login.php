@@ -3,6 +3,7 @@
     session_start();
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $url = '../vistas/perfil.php';
         $email = $_POST['email'];
         $password = $_POST['password']; 
 
@@ -12,17 +13,21 @@
         $email = mysqli_real_escape_string($con, $email);  
         $password = mysqli_real_escape_string($con, $password);
 
-        $sql = "SELECT * FROM usuario WHERE (email = $email) AND (password = $password)";  
-        $result = mysqli_query($con, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        while($row = mysqli_fetch_array($result)){
-            $id = $row['id'];
-            $nombre = $row['name'];
-            $email = $row['email'];
-            $rol = $row['rol'];
-        }     
-
-        $_SESSION['id'] = $id
-        $_SESSION['NOMBRE']
-    }
+        $sql = "SELECT * FROM usuario WHERE (email = '$email') AND (password = '$password')";
+        $result = $con->query($sql);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['nombre'] = $row['nombre'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['rol'] = $row['rol'];
+            }
+        } else {
+            $url = '../vistas/index.php';
+            header('Location: '.$url.'?error=incorrecto');
+        }
+        $con->close();
+        $url = '../vistas/perfil.php';
+        header('Location: '.$url);
+    } 
 ?>

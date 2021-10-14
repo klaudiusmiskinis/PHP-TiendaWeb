@@ -13,9 +13,9 @@
         <div class='row justify-content-center mt-5'>
             <div class='col-md-6'>
                 <div class='text-center'>
-                    <form class='card m-3 p-5' action="../php/auth-login.php" method="POST">
+                    <form id="formLogin" class='card m-3 p-5' action="../php/auth-login.php" method="POST">
                         <h1>Login</h1>
-                        <p class='text-muted'>¡Introduce tu email y contraseña!</p> 
+                        <p class='text-muted' id="frase-login">¡Introduce tu email y contraseña!</p> 
                         <input class='mt-2 shadow-sm form-control' type='email' name='email' placeholder='Email' autocomplete='off' required> 
                         <input class='mt-3 shadow-sm form-control' type='password' name='password' placeholder='Contraseña' autocomplete='off' required> 
                         <input class='mt-3 shadow-sm text-center btn' type='submit' value='Iniciar sesión' href='#'>
@@ -31,7 +31,7 @@
         <div class='row justify-content-center mt-5'>
             <div class='col-md-6'>
                 <div class='text-center'>
-                    <form class='card m-3 p-5' action="../php/insert-register.php" method="POST">
+                    <form id="formRegister" class='card m-3 p-5' action="../php/insert-register.php" method="POST">
                         <h1>Register</h1>
                         <p class='text-muted'>¡Registrate rellenando los campos!</p> 
                         <input class='mt-2 shadow-sm form-control' type='text' name='nombre' placeholder='Introduce tu nombre de usuario *' autocomplete='off' required>
