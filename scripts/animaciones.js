@@ -12,3 +12,5 @@ $("#btn-to-login").click(function() {
     $('#container-register').slideUp("slow");
     $('#container-login').slideDown("slow");
 });
+
+console.log('ASD 1');
