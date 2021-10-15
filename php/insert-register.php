@@ -16,11 +16,11 @@
         $email = mysqli_real_escape_string($con, $email);  
         $password = mysqli_real_escape_string($con, $password);
         
-        $sql2 = "SELECT email FROM usuario WHERE (email = '$email')";
-        $result = $con->query($sql2);
+        $sql1 = "SELECT email FROM usuario WHERE email = '$email'";
+        $result = $con->query($sql1);
         if ($result->num_rows == 0) {
-                $sql = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `avatar`) VALUES ('$nombre','$email','$password','none')";
-            if ($con->query($sql)) {
+                $sql2 = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `avatar`) VALUES ('$nombre','$email','$password','none')";
+            if ($con->query($sql2)) {
                 'Usuario insertado';
             }
         } else {
