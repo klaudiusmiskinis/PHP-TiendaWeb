@@ -12,4 +12,5 @@ a:hover {
     transition: 0.3s;
     cursor: pointer;
     color: var(--bs-red);
+    text-align: center;
 }
