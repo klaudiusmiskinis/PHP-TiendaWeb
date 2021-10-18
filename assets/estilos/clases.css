@@ -44,3 +44,8 @@
 .blur {
     border-radius: 40px;
 }
+
+.navegador {
+    border-radius: 20px;
+    border: 1px solid var(--b);
+}

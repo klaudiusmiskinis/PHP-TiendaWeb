@@ -22,6 +22,7 @@
                 $sql2 = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `avatar`) VALUES ('$nombre','$email','$password','none')";
             if ($con->query($sql2)) {
                 'Usuario insertado';
+                $url = '../vistas/index.php?registrado=correcto';
             }
         } else {
             $url = '../vistas/index.php?error=existe';
