@@ -61,12 +61,20 @@
     background-color: white;
 }
 
-.profile {
-    fill: var(--principal);
-    transition: 0.5s;
+.svg {
+    fill: var(--b);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;;
 }
 
-.profile:hover {
-    fill: var(--bs-red);
-    transition: 0.5s;
+.svg:hover {
+    fill: grey;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
+.nav-link {
+    color: var(--b);
+}
+
+.nav-link:hover {
+    color: grey;
 }

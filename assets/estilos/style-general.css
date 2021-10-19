@@ -4,13 +4,13 @@
 
 a {
     text-decoration: none;
-    color: var(--principal);
+    color: var(--b);
     transition: 0.5s;
 }
 
 a:hover {
     transition: 0.3s;
     cursor: pointer;
-    color: var(--bs-red);
+    color: var(--b);
     text-align: center;
 }
