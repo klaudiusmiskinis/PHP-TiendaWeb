@@ -1,10 +1,21 @@
 <?php
     session_start();
-    include('../database/conexion.php');
-    include('../componentes/head.php');
-    include('../componentes/navbar.php');
-    include('../componentes/background.php');
-    componenteHead('Home');
-    componenteBackground();
-    componenteNavbar($_SESSION['nombre']);
+    if (!empty($_SESSION['nombre'])) {
+        include('../componentes/background.php');
+        include('../componentes/scripts.php');
+        include('../componentes/navbar.php');
+        include('../database/conexion.php');
+        include('../componentes/head.php');
+        
+        componenteHead('Home');
+        componenteBackground();
+        componenteNavbar($_SESSION['nombre']);
+        componenteScripts();
+    } else {
+        header("Location: index.php");
+    }
+   
+    
+    
+
 ?>
