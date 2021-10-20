@@ -63,18 +63,31 @@
 
 .svg {
     fill: var(--b);
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;;
+    transition: 0.4s;
 }
 
 .svg:hover {
     fill: grey;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+    transition: 0.4s;
+}
+
+.salir:hover {
+    fill: var(--bs-red);
+    transition: 0.4s;
 }
 
 .nav-link {
     color: var(--b);
+    border-bottom: 1px solid transparent;
 }
 
 .nav-link:hover {
     color: grey;
+    border-bottom: 1px solid grey;
+}
+
+.row {
+    padding-left: 0.1rem !important;
+    padding-right: 0.1rem !important;
+    --bs-gutter-x: 0 !important
 }
