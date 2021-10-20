@@ -3,7 +3,7 @@
     session_start();
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
-        $url = '../vistas/perfil.php';
+        $url = '../vistas/home.php';
         $email = $_POST['email'];
         $password = $_POST['password']; 
 
