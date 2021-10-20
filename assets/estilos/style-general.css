@@ -6,11 +6,11 @@ a {
     text-decoration: none;
     color: var(--b);
     transition: 0.5s;
+    text-align: center;
 }
 
 a:hover {
     transition: 0.3s;
     cursor: pointer;
     color: var(--b);
-    text-align: center;
 }
