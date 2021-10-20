@@ -1,0 +1,10 @@
+<?php
+    session_start();
+    include('../database/conexion.php');
+    include('../componentes/head.php');
+    include('../componentes/navbar.php');
+    include('../componentes/background.php');
+    componenteHead('Home');
+    componenteBackground();
+    componenteNavbar($_SESSION['nombre']);
+?>
