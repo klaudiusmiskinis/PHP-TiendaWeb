@@ -1,6 +1,6 @@
 <?php function componenteNavbar($nombre) { ?>
 <?php $nombre = strtok($nombre, ' '); ?>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-2" id="navegador">
         <nav class="navbar m-2 rounded bg-dark">
             <div class="container-fluid">
                 <div class="row">

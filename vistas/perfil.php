@@ -3,22 +3,41 @@
     include('../database/conexion.php');
     include('../componentes/head.php');
     include('../componentes/background.php');
+    include('../componentes/navbar.php');
     componenteHead('Perfil');
     componenteBackground();
 ?>
 
 <body>
-    <div class="container-md sticky">
-        <div class="row">
-            <div class="col-sm-auto navbar navbar-light bg-light mx-5 mt-3 p-2 blur">
-                <p class="m-2"><?php echo 'Bienvenido '.$_SESSION['nombre'] ?></p>            
+    <?php componenteNavbar($_SESSION['nombre']); ?>
+
+    <div class="container-fluid justify-content-between rounded bg-dark text-light">
+        <div class="d-flex justify-content-between row">
+            <div class="col">
+                <div class="card bg-dark">
+                    <!-- <img src="#" class="card-img-top"> -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
             </div>
-            <nav class="col-md navbar navbar-light bg-light mx-5 mt-3 p-2 blur">
-                <div class="m-2">Esto es una pagina temporal</div>
-                <div class="m-2"><?php echo 'Tu id es el: '.$_SESSION['id'] ?></div>
-                <div class="m-2"><?php echo 'Tu email es el: '.$_SESSION['email'] ?></div>
-                <div class="m-2"><?php echo 'Tu rol es el: '.$_SESSION['rol'] ?></div>
-            </nav>
+            <div class="col mx-4">
+            <div class="card bg-dark">
+                    <!-- <img src="#" class="card-img-top"> -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark">
+                    <!-- <img src="#" class="card-img-top"> -->
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
 </body>
