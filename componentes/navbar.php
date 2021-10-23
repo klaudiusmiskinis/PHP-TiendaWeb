@@ -6,10 +6,7 @@
                 <div class="row">
                     <div class="col text-center">
                     <a href="./perfil.php">
-                        <svg class="svg my-2 mx-1" xmlns="http://www.w3.org/2000/svg" height="25" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16">
-                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                        </svg>
+                        <img src="../assets/svg/person-circle.svg" width="25" class="svg my-2 mx-1">
                         </a>
                     </div>
                     <div class="col">
@@ -40,10 +37,7 @@
                 <div class="row">
                     <div class="col text-center">
                     <a href="./logout.php">
-                        <svg class="svg my-2 mx-1 salir" xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-door-closed" viewBox="0 0 16 16">
-                        <path d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z"/>
-                        <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z"/>
-                        </svg>
+                        <img src="../assets/svg/door-closed.svg" width="30" alt="door" class="svg my-2 mx-1 salir">
                     </a>
                     </div>
                 </div>
