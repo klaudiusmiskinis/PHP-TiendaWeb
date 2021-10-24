@@ -45,22 +45,6 @@
     border-radius: 40px;
 }
 
-.nav-der {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: white;
-}
-
-.nav-izq {
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    background-color: white;
-}
-
-.nav {
-    background-color: white;
-}
-
 .svg {
     fill: var(--b);
     transition: 0.4s;
