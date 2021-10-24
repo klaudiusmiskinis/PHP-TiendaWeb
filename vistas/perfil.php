@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if (empty($_SESSION['nombre'])) {
+        header("Location: index.php");
+    }
     include('../database/conexion.php');
     include('../componentes/head.php');
     include('../componentes/background.php');
@@ -11,7 +14,6 @@
 
 <body>
     <?php componenteNavbar($_SESSION['nombre']); ?>
-
     <div class="container-fluid justify-content-between rounded bg-dark text-light">
         <div class="d-flex justify-content-between row">
             <div class="col">
@@ -40,6 +42,5 @@
             </div>
         </div>
     </div>
-
     <?php componenteScripts(); ?>
 </body>
