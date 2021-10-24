@@ -28,6 +28,9 @@ window.onload = function(e) {
     });
 };
 
+$('#offcanvasWithBackdrop').on('click', function() {
+    $('#offcanvasWithBackdrop').slideDown();
+});
 
 //CLICK FUNCIONES
 $('#btn-to-register').on('click', function() {
