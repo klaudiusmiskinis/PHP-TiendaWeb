@@ -4,6 +4,7 @@
     include('../componentes/head.php');
     include('../componentes/background.php');
     include('../componentes/navbar.php');
+    include('../componentes/scripts.php');
     componenteHead('Perfil');
     componenteBackground();
 ?>
@@ -40,4 +41,5 @@
         </div>
     </div>
 
+    <?php componenteScripts(); ?>
 </body>
