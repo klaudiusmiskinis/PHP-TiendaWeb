@@ -12,8 +12,4 @@
     componenteBackground();
     componenteNavbar($_SESSION['nombre']);
     componenteScripts();
-   
-    
-    
-
 ?>
