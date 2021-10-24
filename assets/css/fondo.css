@@ -6,6 +6,7 @@
     left: 0;
     background: var(--principal);
     overflow: hidden;
+    z-index: -99;
 }
 
 .background span {
