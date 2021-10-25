@@ -16,11 +16,12 @@
 <body>
 <?php componenteNavbar($_SESSION['nombre']); ?>
 <div class="container-fluid">
-   <?php for ($i = 1; $i < 4; $i++) {
-       componenteProductos();
+   <?php for ($i = 1; $i < 10; $i++) {
+       componenteTest();
    };
    ?>
 </div>
+<?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
 <?php  componenteScripts(); ?>
 </body>
 
