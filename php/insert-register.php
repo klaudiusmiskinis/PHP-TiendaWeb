@@ -8,7 +8,7 @@
         $password = $_POST['password']; 
         $email = strtolower($email);
 
-        //PARA PREVENIR DE INYECCIÓN SQL
+        //PARA PREVENIR INYECCIÓN SQL
         $nombre = stripcslashes($nombre);
         $email = stripcslashes($email);
         $password = stripcslashes($password);  
