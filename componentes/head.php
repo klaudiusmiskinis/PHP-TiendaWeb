@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
         <link rel='stylesheet' href='../assets/css/style-general.css'>
+        <link rel='stylesheet' href='../assets/css/panel-lateral.css'>
+        <link rel='stylesheet' href='../assets/css/scrollbar.css'>
         <link rel='stylesheet' href='../assets/css/clases.css'>
         <link rel='stylesheet' href='../assets/css/fondo.css'>
         <link rel='stylesheet' href='../assets/css/var.css'>
