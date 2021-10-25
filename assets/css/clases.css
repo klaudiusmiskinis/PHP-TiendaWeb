@@ -70,6 +70,10 @@
     border-bottom: 1px solid grey;
 }
 
+.nav-link:focus, .nav-link:hover {
+    color: grey;
+}
+
 .row {
     padding-left: 0.1rem !important;
     padding-right: 0.1rem !important;
