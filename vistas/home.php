@@ -17,7 +17,7 @@
 <?php componenteNavbar($_SESSION['nombre']); ?>
 <div class="container-fluid">
    <?php for ($i = 1; $i < 10; $i++) {
-       componenteTest();
+    //    componenteTest();
    };
    ?>
 </div>
