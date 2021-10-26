@@ -62,12 +62,10 @@
 
 .nav-link {
     color: var(--b);
-    border-bottom: 1px solid transparent;
 }
 
 .nav-link:hover {
     color: grey;
-    border-bottom: 1px solid grey;
 }
 
 .nav-link:focus, .nav-link:hover {
