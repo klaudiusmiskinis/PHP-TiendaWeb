@@ -11,7 +11,7 @@
                     <?php generarIconPerfil(); ?>
                 </a>
             </div>
-            <div class="d-flex bg-dark text-light p-2 rounded">
+            <div class="d-flex text-light bg-dark p-2 rounded">
                 <a class="nav-link" href="#">Productos</a>
                 <a class="nav-link" href="#">Home</a>
                 <a class="nav-link" href="#">Ofertas</a>
