@@ -22,6 +22,6 @@
    ?>
 </div>
 <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
-<?php  componenteScripts(); ?>
+<?php componenteScripts(); ?>
 </body>
 
