@@ -1,14 +1,8 @@
 <?php function componenteBackground() { ?>
-    <ul class="background">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
+    <div class='background'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 <?php } ?>
