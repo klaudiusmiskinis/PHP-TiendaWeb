@@ -9,6 +9,7 @@
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');
+    include('../componentes/popup-salir.php');
     componenteHead('Perfil');
     componenteBackground();
 ?>
@@ -22,7 +23,7 @@
             <div class="d-grid col-11 mx-auto">
             <h3 class="mx-1 mt-3">Cambiar nombre de usuario</h3>
             <div class="input-group mb-3">
-                    <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>">
+                    <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>" autocomplete="off">
                     <button class="btn btn-outline-light my-1" type="submit">Cambiar nombre</button>
                 </div>
             </div>
@@ -32,9 +33,9 @@
         <form class="row bg-dark text-light rounded mb-2" action="password-usuario.php" method="POST">
             <div class="d-grid col-11 mx-auto">
             <h3 class="mx-1 mt-3">Cambiar contraseña</h3>
-                <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña">
+                <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña" autocomplete="off">
                 <div class="input-group mb-3">
-                    <input type="password" name="password-two" id="password-two" class="form-control my-1" placeholder="Vuelve a introducir tu nueva contraseña">
+                    <input type="password" name="password-two" id="password-two" class="form-control my-1" placeholder="Vuelve a introducir tu nueva contraseña" autocomplete="off">
                     <button class="btn btn-outline-light my-1" type="submit">Cambiar contraseña</button>
                 </div>
             </div>
@@ -53,5 +54,6 @@
 
     </div>
     <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
+    <?php popupCerrar() ?>
     <?php componenteScripts(); ?>
 </body>
