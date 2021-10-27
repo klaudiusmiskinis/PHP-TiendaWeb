@@ -10,6 +10,7 @@
     include('../componentes/head.php');
     include('../componentes/productos.php');
     include('../componentes/panel-lateral.php');
+    include('../componentes/popup-salir.php');
     componenteHead('Home');
     componenteBackground();
 ?>
@@ -23,5 +24,6 @@
 </div>
 <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
 <?php componenteScripts(); ?>
+<?php popupCerrar(); ?>
 </body>
 

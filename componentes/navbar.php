@@ -17,7 +17,7 @@
                 <a class="nav-link" href="./ofertas.php">Ofertas</a>
             </div>
             <div class="bg-dark text-light p-2 rounded">
-                <a href="./logout.php">
+                <a data-bs-toggle="modal" data-bs-target="#popup-salir">
                    <?php generarIconLogOut(); ?>
                 </a>
             </div>
