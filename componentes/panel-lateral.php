@@ -87,27 +87,27 @@
             <?php if($rol == 'user' || $rol == 'admin') { ?>
             <div class="container-fluid">
 
-            <!--  USER | USUARIO -->
-            <div class="row text-center mt-3">
-                <div class="col d-grid gap-1">
-                    <h6 class="mb-2 text-center">Usuario</h6>
-                </div>
-            </div>
-
-            <!-- USUARIO -->
-            <div class="row text-center">
-                <div class="col d-grid gap-1">
-                    <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-perfil" aria-expanded="false" aria-controls="desplegar-perfil">· Perfil ·</button>
-                </div>
-                <div class="collapse" id="desplegar-perfil">
-                    <div class="container-fluid d-grid gap-1 mt-1">
-                        <a href="./perfil.php" class="btn btn btn-outline-secondary shadow-sm">Editar perfil</a>
-                        <a class="btn btn-outline-danger shadow-sm" href="./logout.php">Cerrar sesión</a>
-                        <hr>
+                <!--  USER | USUARIO -->
+                <div class="row text-center mt-3">
+                    <div class="col d-grid gap-1">
+                        <h6 class="mb-2 text-center">Usuario</h6>
                     </div>
                 </div>
-            </div>
-            <!-- USUARIOs -->
+
+                <!-- USUARIO -->
+                <div class="row text-center">
+                    <div class="col d-grid gap-1">
+                        <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-perfil" aria-expanded="false" aria-controls="desplegar-perfil">· Perfil ·</button>
+                    </div>
+                    <div class="collapse" id="desplegar-perfil">
+                        <div class="container-fluid d-grid gap-1 mt-1">
+                            <a href="./perfil.php" class="btn btn btn-outline-secondary shadow-sm">Editar perfil</a>
+                            <a class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#popup-salir">Cerrar sesión</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         <?php }; ?>
     </div>
