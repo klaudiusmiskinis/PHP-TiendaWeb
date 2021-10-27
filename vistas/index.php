@@ -17,7 +17,7 @@
                         <p class='text-muted' id="frase-login">¡Introduce tu email y contraseña!</p> 
                         <input class='mt-2 shadow-sm form-control' type='email' name='email' placeholder='Email' autocomplete='off' required> 
                         <input class='mt-3 shadow-sm form-control' type='password' name='password' placeholder='Contraseña' autocomplete='off' required> 
-                        <input class='mt-3 shadow-sm text-center btn' type='submit' value='Iniciar sesión' href='#'>
+                        <input class='mt-3 shadow-sm text-center btn btn-negro' type='submit' value='Iniciar sesión' href='#'>
                         <p class='text-muted mt-2'>¿No tienes una cuenta?</p>
                         <a type="text" class="btn-outline-dark" id="btn-to-register">¡Registrate aquí!</a>
                     </form>
@@ -36,7 +36,7 @@
                         <input class='mt-2 shadow-sm form-control' type='text' name='nombre' placeholder='Introduce tu nombre de usuario *' autocomplete='off' required>
                         <input class='mt-3 shadow-sm form-control' type='email' name='email' placeholder='Introduce tu email *' autocomplete='off' required> 
                         <input class='mt-3 shadow-sm form-control' type='password' name='password' placeholder='Introduce tu contraseña *' autocomplete='off' required>
-                        <input class='mt-3 shadow-sm text-center btn' type='submit' value='Registrarse'>
+                        <input class='mt-3 shadow-sm text-center btn btn-negro' type='submit' value='Registrarse'>
                         <p class='text-muted mt-3'>¿Ya tienes una cuenta?</p>
                         <a type="text" class="btn-outline-dark" id="btn-to-login">¡Inicia sesión!</a>
                     </form>
