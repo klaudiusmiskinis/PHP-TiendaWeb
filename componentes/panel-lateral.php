@@ -27,9 +27,9 @@
                 </div>
                 <div class="collapse" id="desplegar-usuarios">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn-outline-secondary shadow-sm">Ver usuarios</a>
-                        <a class="btn btn-outline-secondary shadow-sm">Crear usuario</a>
-                        <a class="btn btn-outline-secondary shadow-sm">Eliminar usuarios</a>
+                        <a class="btn btn-outline-light shadow-sm">Ver usuarios</a>
+                        <a class="btn btn-outline-light shadow-sm">Crear usuario</a>
+                        <a class="btn btn-outline-light shadow-sm">Eliminar usuarios</a>
                         <hr>
                     </div>
                 </div>
@@ -42,9 +42,9 @@
                 </div>
                 <div class="collapse" id="desplegar-productos">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn-outline-secondary shadow-sm">Ver productos</a>
-                        <a class="btn btn-outline-secondary shadow-sm">Crear productos</a>
-                        <a class="btn btn-outline-secondary shadow-sm">Eliminar productos</a>
+                        <a class="btn btn-outline-light shadow-sm">Ver productos</a>
+                        <a class="btn btn-outline-light shadow-sm">Crear productos</a>
+                        <a class="btn btn-outline-light shadow-sm">Eliminar productos</a>
                         <hr>
                     </div>
                 </div>
@@ -57,9 +57,9 @@
                 </div>
                 <div class="collapse" id="desplegar-categorias">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn btn-outline-secondary shadow-sm">Ver categorias</a>
-                        <a class="btn btn btn-outline-secondary shadow-sm">Crear categorias</a>
-                        <a class="btn btn btn-outline-secondary shadow-sm">Eliminar categorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Ver categorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Crear categorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Eliminar categorias</a>
                         <hr>
                     </div>
                 </div>
@@ -72,9 +72,9 @@
                 </div>
                 <div class="collapse" id="desplegar-subcategorias">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn btn-outline-secondary shadow-sm">Ver subcategorias</a>
-                        <a class="btn btn btn-outline-secondary shadow-sm">Crear subcategorias</a>
-                        <a class="btn btn btn-outline-secondary shadow-sm">Eliminar subcategorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Ver subcategorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Crear subcategorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Eliminar subcategorias</a>
                         <hr>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="collapse" id="desplegar-perfil">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a href="./perfil.php" class="btn btn btn-outline-secondary shadow-sm">Editar perfil</a>
+                            <a href="./perfil.php" class="btn btn btn-outline-light shadow-sm">Editar perfil</a>
                             <a class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#popup-salir">Cerrar sesión</a>
                             <hr>
                         </div>
