@@ -1,13 +1,14 @@
-<?php 
+
+<?php //ABRIMOS FUNCION
     function componentePanel($nombre, $rol) {
     $nombre = strtok($nombre, ' '); 
 ?>
-
 <div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="panel-lateral">
     <div class="offcanvas-header text-center">
         <h5 class="offcanvas-title" id="panel-lateral">Panel de usuario</h5>
         <small class="text-muted"><?php echo '('.$nombre.')'; ?></small>
     </div>
+    
     <div class="offcanvas-body">
             <?php if($rol == 'admin') { ?>
             <div class="container-fluid">
@@ -19,7 +20,7 @@
                 </div>
             </div>
 
-            <!-- USUARIOS -->
+            <!-- ADMIN | USUARIOS -->
             <div class="row text-center">
                 <div class="col d-grid gap-1">
                     <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-usuarios" aria-expanded="false" aria-controls="desplegar-usuarios">· Usuarios ·</button>
@@ -34,7 +35,7 @@
                 </div>
             </div>
 
-            <!-- PRODUCTOS -->
+            <!-- ADMIN | PRODUCTOS -->
             <div class="row text-center mt-1">
                 <div class="col d-grid gap-1">
                     <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-productos" aria-expanded="false" aria-controls="desplegar-productos">· Productos ·</button>
@@ -49,7 +50,7 @@
                 </div>
             </div>
 
-            <!-- CATEGORIAS -->
+            <!-- ADMIN |CATEGORIAS -->
             <div class="row text-center mt-1">
                 <div class="col d-grid gap-1">
                     <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-categorias" aria-expanded="false" aria-controls="desplegar-categorias">· Categorias ·</button>
@@ -64,7 +65,7 @@
                 </div>
             </div>
 
-            <!-- SUBCATEGORIAS -->
+            <!-- ADMIN | SUBCATEGORIAS -->
             <div class="row text-center mt-1">
                 <div class="col d-grid gap-1">
                     <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-subcategorias" aria-expanded="false" aria-controls="desplegar-categorias">· Subcategorias ·</button>
@@ -86,29 +87,30 @@
             <?php if($rol == 'user' || $rol == 'admin') { ?>
             <div class="container-fluid">
 
-            <!-- USUARIO -->
+            <!--  USER | USUARIO -->
             <div class="row text-center mt-3">
                 <div class="col d-grid gap-1">
                     <h6 class="mb-2 text-center">Usuario</h6>
                 </div>
             </div>
 
-            <!-- USUARIOS -->
+            <!-- USUARIO -->
             <div class="row text-center">
                 <div class="col d-grid gap-1">
                     <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-perfil" aria-expanded="false" aria-controls="desplegar-perfil">· Perfil ·</button>
                 </div>
                 <div class="collapse" id="desplegar-perfil">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn btn-outline-secondary shadow-sm">Editar perfil</a>
+                        <a href="./perfil.php" class="btn btn btn-outline-secondary shadow-sm">Editar perfil</a>
                         <a class="btn btn-outline-danger shadow-sm" href="./logout.php">Cerrar sesión</a>
                         <hr>
                     </div>
                 </div>
             </div>
-            <!-- USUARIO -->
+            <!-- USUARIOs -->
             </div>
-            <?php }; ?>
+        <?php }; ?>
     </div>
 </div>
-<?php } ?>
+<!-- CERRAMOS FUNCIONES -->
+<?php }; ?>
