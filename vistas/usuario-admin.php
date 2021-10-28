@@ -1,21 +1,26 @@
 <?php
     session_start();
-    if (empty($_SESSION['nombre'])) {
+    if ($_SESSION['rol'] != 'admin') {
         header("Location: index.php");
     }
-    include('../database/conexion.php');
     include('../componentes/background.php');
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');
-    include('../componentes/productos.php');
     include('../componentes/panel-lateral.php');
     include('../componentes/popup-salir.php');
-    componenteHead('Home');
+    include('../componentes/tabla.php');
+    componenteHead('ADMIN | Usuario');
     componenteBackground();
 ?>
 <body>
-    
+<?php componenteNavbar($_SESSION['nombre']); ?>
+<div class="container-fluid">
+    <div class="row bg-dark text-light rounded p-2">
+        <?php generarTablaAllUsers(); ?>
+    </div>
+</div>
+
 <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
 <?php componenteScripts(); ?>
 <?php popupCerrar(); ?>

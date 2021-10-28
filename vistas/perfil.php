@@ -3,7 +3,6 @@
     if (empty($_SESSION['nombre'])) {
         header("Location: index.php");
     }
-    include('../database/conexion.php');
     include('../componentes/panel-lateral.php');
     include('../componentes/background.php');
     include('../componentes/scripts.php');
