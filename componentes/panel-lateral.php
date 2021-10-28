@@ -27,7 +27,7 @@
                 </div>
                 <div class="collapse" id="desplegar-usuarios">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn-outline-light shadow-sm">Ver usuarios</a>
+                        <a class="btn btn-outline-light shadow-sm">Editar usuarios</a>
                         <a class="btn btn-outline-light shadow-sm">Crear usuario</a>
                         <a class="btn btn-outline-light shadow-sm">Eliminar usuarios</a>
                         <hr>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="collapse" id="desplegar-productos">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn-outline-light shadow-sm">Ver productos</a>
+                        <a class="btn btn-outline-light shadow-sm">Editar productos</a>
                         <a class="btn btn-outline-light shadow-sm">Crear productos</a>
                         <a class="btn btn-outline-light shadow-sm">Eliminar productos</a>
                         <hr>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="collapse" id="desplegar-categorias">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn btn-outline-light shadow-sm">Ver categorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Editar categorias</a>
                         <a class="btn btn btn-outline-light shadow-sm">Crear categorias</a>
                         <a class="btn btn btn-outline-light shadow-sm">Eliminar categorias</a>
                         <hr>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="collapse" id="desplegar-subcategorias">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn btn-outline-light shadow-sm">Ver subcategorias</a>
+                        <a class="btn btn btn-outline-light shadow-sm">Editar subcategorias</a>
                         <a class="btn btn btn-outline-light shadow-sm">Crear subcategorias</a>
                         <a class="btn btn btn-outline-light shadow-sm">Eliminar subcategorias</a>
                         <hr>
