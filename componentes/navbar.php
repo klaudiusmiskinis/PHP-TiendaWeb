@@ -12,9 +12,9 @@
                 </a>
             </div>
             <div class="d-flex bg-dark text-light p-2 rounded">
-                <a class="nav-link" href="./ofertas.php"><?php generarIconProductos(); ?></a>
-                <a class="nav-link" href="./home.php"><?php generarIconHome(); ?></a>
-                <a class="nav-link" href="./ofertas.php"><?php generarIconOfertas(); ?></a>
+                <a class="nav-link" id="item-productos" href="./ofertas.php"><?php generarIconProductos(); ?></a>
+                <a class="nav-link" id="item-home" href="./home.php"><?php generarIconHome(); ?></a>
+                <a class="nav-link" id="item-ofertas" href="./ofertas.php"><?php generarIconOfertas(); ?></a>
             </div>
             <div class="bg-dark text-light p-2 rounded">
                 <a data-bs-toggle="modal" data-bs-target="#popup-salir">
