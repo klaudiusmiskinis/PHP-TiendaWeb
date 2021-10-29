@@ -18,7 +18,6 @@
         </tbody>
     </table>
 <?php } ?>
-
 <?php 
     function listar($con) {
         $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
@@ -28,7 +27,6 @@
         }
     }
 ?>
-
 <?php function filas($row) { ?>
     <tr>
       <td><?php echo $row['id']; ?></td>
