@@ -11,9 +11,9 @@
     include('../componentes/popup-salir.php');
     include('../componentes/tabla.php');
     componenteHead('ADMIN | Usuario');
-    componenteBackground();
 ?>
 <body>
+<?php componenteBackground(); ?>
 <?php componenteNavbar($_SESSION['nombre']); ?>
 <div class="container-fluid">
     <div class="row bg-dark text-light rounded p-2">
