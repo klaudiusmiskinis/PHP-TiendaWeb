@@ -2,15 +2,14 @@
     function generarTablaAllUsers() {
     include('../database/conexion.php');
 ?> 
-
-    <table class="table bg-light" id="usuarios">
-        <thead class="table-dark">
+    <table class="table table-hover table-dark table-striped border border-light" id="usuarios">
+        <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Email</th>
-                <th scope="col">Avatar</th>
-                <th scope="col">Rol</th>
+                <th scope="col" class="border-bottom border-end border-light">ID</th>
+                <th scope="col" class="border-bottom border-end border-light">Nombre</th>
+                <th scope="col" class="border-bottom border-end border-light">Email</th>
+                <th scope="col" class="border-bottom border-end border-light">Avatar</th>
+                <th scope="col" class="border-bottom border-light">Rol</th>
             </tr>
         </thead>
         <tbody>
