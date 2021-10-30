@@ -10,7 +10,7 @@
     <!-- LOGIN -->
     <div class='container-fluid' id='container-login'>
         <div class='row justify-content-center mt-5'>
-            <div class='col-6'>
+            <div class='col-sm-6'>
                 <div class='text-center'>
                     <form id="formLogin" class='card m-3 p-5' action="../php/auth-login.php" method="POST">
                         <h1>Login</h1>
@@ -28,7 +28,7 @@
     <!-- REGISTER -->
     <div class='container-fluid' id='container-register'>
         <div class='row justify-content-center mt-5'>
-            <div class='col-6'>
+            <div class='col-sm-6'>
                 <div class='text-center'>
                     <form id="formRegister" class='card m-3 p-5' action="../php/insert-register.php" method="POST">
                         <h1>Register</h1>

@@ -1,19 +1,21 @@
 <?php function tablaUsuarios() {
     include('../database/conexion.php'); ?>
-    <table class="table table-hover table-dark table-striped border border-light" id="usuarios">
-        <thead>
-            <tr>
-                <th scope="col" class="border-bottom border-end border-light">ID</th>
-                <th scope="col" class="border-bottom border-end border-light">Nombre</th>
-                <th scope="col" class="border-bottom border-end border-light">Email</th>
-                <th scope="col" class="border-bottom border-end border-light">Avatar</th>
-                <th scope="col" class="border-bottom border-light">Rol</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php listar($con); ?>
-        </tbody>
-    </table>
+    <div class="table-responsive">
+        <table class="table table-hover table-dark table-striped border border-light" id="usuarios">
+            <thead>
+                <tr>
+                    <th scope="col" class="border-bottom border-end border-light">ID</th>
+                    <th scope="col" class="border-bottom border-end border-light">Nombre</th>
+                    <th scope="col" class="border-bottom border-end border-light">Email</th>
+                    <th scope="col" class="border-bottom border-end border-light">Avatar</th>
+                    <th scope="col" class="border-bottom border-light">Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php listar($con); ?>
+            </tbody>
+        </table>
+    </div>
 <?php } 
 function listar($con) {
     $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
