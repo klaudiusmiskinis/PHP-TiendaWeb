@@ -71,7 +71,11 @@
 }
 
 .nav-link:focus, .nav-link:hover {
-    color: grey;
+    color: var(--b-hover);
+}
+
+.next:hover, .previous:hover {
+    color: var(--b-hover);
 }
 
 .row {
