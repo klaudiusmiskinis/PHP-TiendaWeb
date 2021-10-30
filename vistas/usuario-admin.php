@@ -17,7 +17,7 @@
 <?php componenteNavbar($_SESSION['nombre']); ?>
 <div class="container-fluid">
     <div class="row bg-dark text-light rounded p-2">
-        <?php generarTablaAllUsers(); ?>
+        <?php tablaUsuarios(); ?>
     </div>
 </div>
 
