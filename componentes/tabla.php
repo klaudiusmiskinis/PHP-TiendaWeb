@@ -1,6 +1,5 @@
-
-<?php function generarTablaAllUsers() {?> 
-    <?php include('../database/conexion.php'); ?>
+<?php function tablaUsuarios() {
+    include('../database/conexion.php'); ?>
     <table class="table table-hover table-dark table-striped border border-light" id="usuarios">
         <thead>
             <tr>
@@ -15,17 +14,16 @@
             <?php listar($con); ?>
         </tbody>
     </table>
-<?php } ?>
-<?php 
-    function listar($con) {
-        $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
-        $result = mysqli_query($con, $query);
-        while ($row = mysqli_fetch_array($result)) {
-            filas($row);
-        }
+<?php } 
+function listar($con) {
+    $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
+    $result = mysqli_query($con, $query);
+    while ($row = mysqli_fetch_array($result)) {
+        filas($row);
     }
-?>
-<?php function filas($row) { ?>
+}
+
+function filas($row) { ?>
     <tr>
       <td><?php echo $row['id']; ?></td>
       <td><?php echo $row['nombre']; ?></td>
