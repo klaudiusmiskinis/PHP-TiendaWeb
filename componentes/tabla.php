@@ -1,7 +1,7 @@
 <?php function tablaUsuarios() {
     include('../database/conexion.php'); ?>
-    <div class="table-responsive">
-        <table class="table table-hover table-dark table-striped border border-light" id="usuarios">
+    <div class="table-responsive" id="tabla-responsive">
+        <table class="table table-hover table-striped border border-light" id="usuarios">
             <thead>
                 <tr>
                     <th scope="col" class="border-bottom border-end border-light">ID</th>
