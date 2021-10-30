@@ -3,6 +3,7 @@
 :root {
     --principal: #191919;
     --b: #fff;
+    --b-hover: grey;
 }
 
 @keyframes move {
