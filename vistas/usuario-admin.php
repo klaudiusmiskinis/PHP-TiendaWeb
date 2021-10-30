@@ -21,7 +21,7 @@
     </div>
 </div>
 
+<?php popupCerrar(); ?>
 <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
 <?php componenteScripts(); ?>
-<?php popupCerrar(); ?>
 </body>
