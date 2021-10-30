@@ -1,7 +1,5 @@
-<?php 
-    function generarTablaAllUsers() {
-    include('../database/conexion.php');
-?> 
+<?php include('../database/conexion.php'); ?>
+<?php function generarTablaAllUsers() {?> 
     <table class="table table-hover table-dark table-striped border border-light" id="usuarios">
         <thead>
             <tr>
