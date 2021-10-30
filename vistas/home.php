@@ -15,7 +15,7 @@
 <body>
 <?php componenteNavbar($_SESSION['nombre']); ?>
 <div class="container-fluid">
-    <div class="row bg-dark text-light text-center rounded p-2">
+    <div class="row text-center rounded p-2">
         <div class="col">Prueba</div>
     </div>
 </div>
