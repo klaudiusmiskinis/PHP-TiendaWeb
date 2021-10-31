@@ -5,7 +5,6 @@ $(document).ready(function() {
 
 function estiloDataTable(id) {
     $('#' + id + '_length').hide();
-
     $('#' + id + '_wrapper').addClass('p-2');
     $('#' + id + '_info').addClass('text-center');
     $('#' + id + '_filter').addClass('mb-3 d-flex')
