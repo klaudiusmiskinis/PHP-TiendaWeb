@@ -15,8 +15,11 @@
 <body>
     <?php componenteBackground(); ?>
     <?php componenteNavbar($_SESSION['nombre']); ?>
+    
+    <!-- TABLA PARA TODOS LOS USUARIOS -->
     <div class="container-fluid">
         <div class="row bg-dark text-light rounded p-2">
+            <h4 class="px-2">Todos los usuarios</h4>
             <?php tablaUsuarios(); ?> 
         </div>
     </div>
