@@ -8,7 +8,7 @@
     include('../componentes/navbar.php');
     include('../componentes/head.php');
     include('../componentes/panel-lateral.php');
-    include('../componentes/popup-salir.php');
+    include('../componentes/popups.php');
     componenteHead('Home');
     componenteBackground();
 ?>
