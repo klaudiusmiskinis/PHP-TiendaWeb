@@ -5,6 +5,7 @@
     --dark: #212529;
     --principal-low: #666666;
     --b: #fff;
+    --b-hover: grey;
 }
 
 @keyframes move {

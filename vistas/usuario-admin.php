@@ -8,20 +8,23 @@
     include('../componentes/navbar.php');
     include('../componentes/head.php');
     include('../componentes/panel-lateral.php');
-    include('../componentes/popup-salir.php');
+    include('../componentes/popups.php');
     include('../componentes/tabla.php');
     componenteHead('ADMIN | Usuario');
 ?>
 <body>
-<?php componenteBackground(); ?>
-<?php componenteNavbar($_SESSION['nombre']); ?>
-<div class="container-fluid">
-    <div class="row bg-dark text-light rounded p-2">
-        <?php generarTablaAllUsers(); ?>
+    <?php componenteBackground(); ?>
+    <?php componenteNavbar($_SESSION['nombre']); ?>
+    
+    <!-- TABLA PARA TODOS LOS USUARIOS -->
+    <div class="container-fluid">
+        <div class="row bg-dark text-light rounded p-2">
+            <h4 class="px-2">Todos los usuarios</h4>
+            <?php tablaUsuarios(); ?> 
+        </div>
     </div>
-</div>
 
-<?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
-<?php componenteScripts(); ?>
-<?php popupCerrar(); ?>
+    <?php popupCerrar(); ?>
+    <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
+    <?php componenteScripts(); ?>
 </body>

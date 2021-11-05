@@ -27,7 +27,7 @@
                 </div>
                 <div class="collapse" id="desplegar-usuarios">
                     <div class="container-fluid d-grid gap-1 mt-1">
-                        <a class="btn btn-outline-light shadow-sm">Editar usuarios</a>
+                        <a class="btn btn-outline-light shadow-sm" href="./usuario-admin.php">Editar usuarios</a>
                         <a class="btn btn-outline-light shadow-sm">Crear usuario</a>
                         <a class="btn btn-outline-light shadow-sm">Eliminar usuarios</a>
                         <hr>

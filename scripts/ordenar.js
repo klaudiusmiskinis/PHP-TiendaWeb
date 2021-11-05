@@ -1,17 +1,15 @@
 $(document).ready(function() {
     $('#usuarios').DataTable();
-    estiloDataTable();
+    estiloDataTable('usuarios');
 });
 
-function estiloDataTable() {
-    $('#usuarios_wrapper').addClass('p-2');
-    $('#usuarios_length').addClass('d-flex mb-2')
-    $('#usuarios_filter').addClass('d-flex mb-2')
-    $('#usuarios_info').addClass('text-center');
-    $('#usuarios_next').addClass('btn btn-light');
-    $('#usuarios_previous').addClass('btn btn-light');
-    $('#usuarios_paginate').addClass('mt-2 text-center');
+function estiloDataTable(id) {
+    $('#' + id + '_length').hide();
+    $('#' + id + '_wrapper').addClass('p-2');
+    $('#' + id + '_info').addClass('text-center');
+    $('#' + id + '_filter').addClass('mb-3 d-flex')
+    $('#' + id + '_paginate').addClass('mt-2 text-center');
     $('input[type="search"]').addClass('form-control');
+    $('.current').addClass('mx-2');
     $('.paginate_button').addClass('mx-2');
-    $('select').addClass('form-select');
 }
