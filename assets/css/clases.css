@@ -67,15 +67,35 @@
 }
 
 .nav-link:hover {
-    color: grey;
+    color: var(--principal-low);
 }
 
 .nav-link:focus, .nav-link:hover {
-    color: grey;
+    color: var(--principal-low);
 }
 
 .row {
     padding-left: 0.1rem !important;
     padding-right: 0.1rem !important;
     --bs-gutter-x: 0 !important
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--b);
+    background-color: var(--principal);
+    border-color: 1px solid white
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    background-color: var(--principal);
+    border-color:white !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+.accordion-button {
+    background-color: var(--dark) !important;
+    color: var(--b);
+    border-bottom: 1px solid var(--b);
 }
