@@ -1,15 +1,6 @@
-$(document).ready(function() {
-    $('#usuarios').DataTable();
-    estiloDataTable('usuarios');
+$(document).ready( function () {
+    $('table.display').DataTable();
+    $('input[type=search]').addClass('mb-1');
+    $('input').addClass('bg-light');
+    $('select').addClass('bg-light');
 });
-
-function estiloDataTable(id) {
-    $('#' + id + '_length').hide();
-    $('#' + id + '_wrapper').addClass('p-2');
-    $('#' + id + '_info').addClass('text-center');
-    $('#' + id + '_filter').addClass('mb-3 d-flex')
-    $('#' + id + '_paginate').addClass('mt-2 text-center');
-    $('input[type="search"]').addClass('form-control');
-    $('.current').addClass('mx-2');
-    $('.paginate_button').addClass('mx-2');
-}
