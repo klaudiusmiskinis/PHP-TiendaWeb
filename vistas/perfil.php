@@ -8,7 +8,7 @@
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');
-    include('../componentes/popup-salir.php');
+    include('../componentes/popups.php');
     componenteHead('Perfil');
     componenteBackground();
 ?>
@@ -16,9 +16,7 @@
 <body>
     <?php componenteNavbar($_SESSION['nombre']); ?>
     <div class="container-fluid">
-
         <div class="accordion accordion-flush" id="accordionFlushExample">
-
             <!-- CAMBIAR NOMBRE DEL PERFIL -->
             <div class="accordion-item bg-dark text-light rounded mb-2">
                 <h2 class="accordion-header" id="flush-nombre">
@@ -76,12 +74,10 @@
                     </form>
                 </div>
             </div>
-
         </div>
-
     </div>
     
     <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
-    <?php popupCerrar() ?>
+    <?php popupCerrar(); ?>
     <?php componenteScripts(); ?>
 </body>
