@@ -67,7 +67,7 @@
             $this -> email = $email;
         } 
 
-        private function setPassword($password) 
+        public function setPassword($password) 
         {
             $this -> password = $password;
         }
@@ -77,7 +77,7 @@
             $this -> avatar = $avatar;
         }
 
-        private function setRol($rol) 
+        public function setRol($rol) 
         {
             $this -> rol = $rol;
         }
