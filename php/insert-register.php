@@ -7,6 +7,9 @@
         $email = $_POST['email'];
         $password = $_POST['password']; 
         $email = strtolower($email);
+        $opciones = [
+            'cost' => 12,
+        ];
 
         //PARA PREVENIR INYECCIÓN SQL
         $nombre = stripcslashes($nombre);
@@ -14,7 +17,7 @@
         $password = stripcslashes($password);  
         $nombre = mysqli_real_escape_string($con, $nombre);
         $email = mysqli_real_escape_string($con, $email);  
-        $password = mysqli_real_escape_string($con, $password);
+        $password = mysqli_real_escape_string($con, password_hash($password, PASSWORD_BCRYPT, [10]));
         
         $sql1 = "SELECT email FROM usuario WHERE email = '$email'";
         $result = $con->query($sql1);
