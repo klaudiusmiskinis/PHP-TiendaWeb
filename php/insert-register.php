@@ -7,9 +7,6 @@
         $email = $_POST['email'];
         $password = $_POST['password']; 
         $email = strtolower($email);
-        $opciones = [
-            'cost' => 12,
-        ];
 
         //PARA PREVENIR INYECCIÓN SQL
         $nombre = stripcslashes($nombre);
