@@ -74,5 +74,11 @@
         {
             $this -> setConexion(mysqli_connect($this -> servidor, $this -> usuario, $this -> password, $this -> database));
         }
+
+        public function authLogin($email) 
+        {
+            $consulta = "SELECT * FROM usuario WHERE (email = '$email')";
+            return $this -> getConexion() -> query($consulta);
+        }
     }
 ?>
