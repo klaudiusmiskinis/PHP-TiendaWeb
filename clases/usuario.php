@@ -11,12 +11,12 @@
         //CONSTRUCTOR
         public function __construct($id, $nombre, $email, $password, $avatar, $rol) 
         {
-            $this -> $id = $id;
-            $this -> $nombre = $nombre;
-            $this -> $email = $nombre;
-            $this -> $password = $password;
-            $this -> $avatar = $avatar;
-            $this -> $rol = $rol;
+            $this -> id = $id;
+            $this -> nombre = $nombre;
+            $this -> email = $nombre;
+            $this -> password = $password;
+            $this -> avatar = $avatar;
+            $this -> rol = $rol;
         }
 
         //MÉTODOS
@@ -28,12 +28,12 @@
 
         public function getNombre() 
         {
-            return $this -> nombre;
+            return $this->nombre;
         }
        
         public function getEmail() 
         {
-            return  $this -> email;
+            return  $this->email;
         }
 
         public function getPassword() 
@@ -83,7 +83,8 @@
         }
 
         /* MÉTODOS */
-        public function getDatos() {
+        public function getDatos() 
+        {
             return $this -> getId().' '.$this -> getNombre().' '.$this -> getEmail().' '.$this -> getPassword().' '.$this -> getAvatar().' '.$this -> getRol();
         }
     }
