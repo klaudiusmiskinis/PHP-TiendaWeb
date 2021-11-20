@@ -3,21 +3,17 @@
 }
 
 .form-control:focus {
-    background-color: var(--principal);
-    border-color: var(--b);
-    color: var(--b);
-    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    background-color: var(--principal) !important;
+    border-color: var(--b) !important;
+    color: var(--b) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.473);
     transition: 0.5s !important;
 }
 
 .form-control:hover {
-    background-color: var(--principal);
-    border-color: var(--b);
-    color: var(--b);
-}
-
-.form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.473);
+    background-color: var(--principal) !important;
+    border-color: var(--b) !important;
+    color: var(--b) !important;
 }
 
 .btn-outline-dark {
@@ -36,6 +32,7 @@
 .btn-negro {
     color: var(--b) !important;
     background-color: var(--principal) !important;
+    border: 1px solid var(--principal) !important;
 }
 
 .btn-negro:hover {
