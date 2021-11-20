@@ -9,7 +9,8 @@
         private $rol;
 
         //CONSTRUCTOR
-        public function __construct($id, $nombre, $email, $password, $avatar, $rol) {
+        public function __construct($id, $nombre, $email, $password, $avatar, $rol) 
+        {
             $this -> $id = $id;
             $this -> $nombre = $nombre;
             $this -> $email = $nombre;
@@ -51,6 +52,39 @@
         }
 
         /* SETTERs */
-        
+        public function setId($id) 
+        {
+            $this -> $id = $id;
+        }
+
+        public function setNombre($nombre) 
+        {
+            $this -> $nombre = $nombre;
+        }
+
+        public function setEmail($email) 
+        {
+            $this -> $email = $email;
+        } 
+
+        private function setPassword($password) 
+        {
+            $this -> $password = $password;
+        }
+
+        public function setAvatar($avatar) 
+        {
+            $this -> $avatar = $avatar;
+        }
+
+        private function setRol($rol) 
+        {
+            $this -> $rol = $rol;
+        }
+
+        /* MÉTODOS */
+        public function getDatos() {
+            return $this -> getId().' '.$this -> getNombre().' '.$this -> getEmail().' '.$this -> getPassword().' '.$this -> getAvatar().' '.$this -> getRol();
+        }
     }
 ?>
