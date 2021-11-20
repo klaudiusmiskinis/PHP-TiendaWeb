@@ -23,63 +23,63 @@
         /* GETTERs */
         public function getId() 
         {
-            return $this -> $id;
+            return $this -> id;
         }
 
         public function getNombre() 
         {
-            return $this -> $nombre;
+            return $this -> nombre;
         }
        
         public function getEmail() 
         {
-            return  $this -> $email;
+            return  $this -> email;
         }
 
         public function getPassword() 
         {
-            return $this -> $password;
+            return $this -> password;
         }
 
         public function getAvatar() 
         {
-            return $this -> $avatar;
+            return $this -> avatar;
         }
 
         public function getRol() 
         {
-            return  $this -> $rol;
+            return  $this -> rol;
         }
 
         /* SETTERs */
         public function setId($id) 
         {
-            $this -> $id = $id;
+            $this -> id = $id;
         }
 
         public function setNombre($nombre) 
         {
-            $this -> $nombre = $nombre;
+            $this -> nombre = $nombre;
         }
 
         public function setEmail($email) 
         {
-            $this -> $email = $email;
+            $this -> email = $email;
         } 
 
         private function setPassword($password) 
         {
-            $this -> $password = $password;
+            $this -> password = $password;
         }
 
         public function setAvatar($avatar) 
         {
-            $this -> $avatar = $avatar;
+            $this -> avatar = $avatar;
         }
 
         private function setRol($rol) 
         {
-            $this -> $rol = $rol;
+            $this -> rol = $rol;
         }
 
         /* MÉTODOS */
