@@ -12,22 +12,10 @@
         $nombre = stripcslashes($nombre);
         $email = stripcslashes($email);
         $password = stripcslashes($password);  
-        $nombre = mysqli_real_escape_string($con, $nombre);
-        $email = mysqli_real_escape_string($con, $email);  
-        $password = mysqli_real_escape_string($con, password_hash($password, PASSWORD_BCRYPT, [10]));
-        
-        $sql1 = "SELECT email FROM usuario WHERE email = '$email'";
-        $result = $con->query($sql1);
-        if ($result->num_rows == 0) {
-                $sql2 = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `avatar`) VALUES ('$nombre','$email','$password','none')";
-            if ($con->query($sql2)) {
-                'Usuario insertado';
-                $url = '../vistas/index.php?registrado=correcto';
-            }
-        } else {
-            $url = '../vistas/index.php?error=existe';
-        }
-        $con->close();
+        $nombre = mysqli_real_escape_string($conexion -> getConexion(), $nombre);
+        $email = mysqli_real_escape_string($conexion -> getConexion(), $email);  
+        $password = mysqli_real_escape_string($conexion -> getConexion(), password_hash($password, PASSWORD_BCRYPT, [10]));
+        $url = $conexion -> insertRegister($nombre, $email, $password);
         header('Location: '.$url);
     } 
 ?>
