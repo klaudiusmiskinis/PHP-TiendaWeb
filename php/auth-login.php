@@ -12,18 +12,7 @@
         $password = stripcslashes($password);  
         $email = mysqli_real_escape_string($conexion -> getConexion(), $email);  
         $password = mysqli_real_escape_string($conexion -> getConexion(), $password);
-        
-
-        $resultado = $conexion -> authLogin($email);
-        $row = $resultado -> fetch_assoc();
-        
-        if (password_verify($password, $row['password'])) {
-            $url = '../vistas/home.php';
-            $usuario = new Usuario($row['id'], $row['nombre'], $row['email'], $row['password'], $row['avatar'], $row['rol']);
-            $_SESSION['usuario'] = $usuario;
-        } else {
-            $url = '../vistas/index.php?error=incorrecto';          
-        }
+        $url = $conexion -> authLogin($email, $password);
         header('Location: '.$url);
     } 
 ?>
