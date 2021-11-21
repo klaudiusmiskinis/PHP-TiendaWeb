@@ -1,7 +1,6 @@
 <?php
     include("../database/conexion.php");
     include("../clases/usuario.php");
-    session_start();
     $usuario;
     $url;
 
