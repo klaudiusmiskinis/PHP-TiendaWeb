@@ -3,6 +3,7 @@
     if ($_SESSION['rol'] != 'admin') {
         header("Location: index.php");
     }
+    include('../clases/usuario.php');
     include('../componentes/background.php');
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
@@ -11,12 +12,12 @@
     include('../componentes/popups.php');
     include('../componentes/tabla.php');
     componenteHead('ADMIN | Usuario');
+    $usuario = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['email'], $_SESSION['password'], $_SESSION['avatar'], $_SESSION['rol']);
 ?>
 <body>
     <?php componenteBackground(); ?>
-    <?php componenteNavbar($_SESSION['nombre']); ?>
-    
-    <!-- TABLA PARA TODOS LOS USUARIOS -->
+    <?php componenteNavbar($usuario -> getNombre()); ?>
+
     <div class="container-fluid">
         <div class="row bg-dark rounded my-1">
             <div class="col p-2 d-grid gap-2">
@@ -27,9 +28,10 @@
             </div>
         </div>
     </div>
+
     <?php formModalCrearUsuario(); ?>
     <?php formModalTodosUsuarios(); ?>
     <?php popupCerrar(); ?>
-    <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
+    <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
     <?php componenteScripts(); ?>
 </body>
