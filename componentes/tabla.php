@@ -1,5 +1,4 @@
-<?php function tablaUsuarios() {
-    include('../database/conexion.php'); ?>
+<?php function tablaUsuarios() { ?>
     <div class="table-responsive text-light px-2 py-1" id="tabla-responsive">
         <table class="table table-hover table-striped bg-light border border-dark display" id="usuarios">
             <thead>
@@ -12,26 +11,26 @@
                 </tr>
             </thead>
             <tbody>
-                <?php listar($con); ?>
+                <?php listar(); ?>
             </tbody>
         </table>
     </div>
 <?php } 
 
-function listar($con) {
-    $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
-    $result = mysqli_query($con, $query);
-    while ($row = mysqli_fetch_array($result)) {
+function listar() {
+    include('../database/conexion.php');
+    $listado = $conexion -> adminUsuariosSelectAll();
+    while ($row = mysqli_fetch_array($listado)) {
         filas($row);
     }
 }
 
 function filas($row) { ?>
-    <tr>
+<tr>
       <td><?php echo $row['id']; ?></td>
       <td><?php echo $row['nombre']; ?></td>
       <td><?php echo $row['email']; ?></td>
-      <td><?php echo $row['avatar']; ?></td>
+      <td><?php echo 'img/base64';?></td>
       <td><?php echo $row['rol']; ?></td>
-    </tr>
+</tr>
 <?php } ?> 
