@@ -82,9 +82,14 @@
             $row = $resultado -> fetch_assoc();
         
             if (password_verify($password, $row['password'])) {
+                session_start();
                 $url = '../vistas/home.php';
-                $usuario = new Usuario($row['id'], $row['nombre'], $row['email'], $row['password'], $row['avatar'], $row['rol']);
-                $_SESSION['usuario'] = $usuario;
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['nombre'] = $row['nombre'];
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['password'] = $row['password'];
+                $_SESSION['avatar'] = $row['avatar'];
+                $_SESSION['rol'] = $row['rol'];
             } else {
                 $url = '../vistas/index.php?error=incorrecto';          
             }
