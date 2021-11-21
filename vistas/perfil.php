@@ -9,6 +9,7 @@
     include('../componentes/navbar.php');
     include('../componentes/head.php');
     include('../componentes/popups.php');
+    $usuario = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['email'], $_SESSION['password'], $_SESSION['avatar'], $_SESSION['rol']);
     componenteHead('Perfil');
     componenteBackground();
 ?>
@@ -16,7 +17,7 @@
 <body>
     <?php componenteNavbar($_SESSION['nombre']); ?>
     <div class="container-fluid">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion accordion-flush" id="acordeonPadre">
             <!-- CAMBIAR NOMBRE DEL PERFIL -->
             <div class="accordion-item bg-dark text-light rounded mb-2">
                 <h2 class="accordion-header" id="flush-nombre">
@@ -24,7 +25,7 @@
                         Cambiar nombre de usuario
                     </button>
                 </h2>
-                <div id="flush-colapsar-nombre" class="accordion-collapse collapse" aria-labelledby="flush-nombre" data-bs-parent="#accordionFlushExample">
+                <div id="flush-colapsar-nombre" class="accordion-collapse collapse" aria-labelledby="flush-nombre" data-bs-parent="#acordeonPadre">
                     <form action="nombre-usuario.php" method="POST">
                         <div class="d-grid col-11 mx-auto">
                         <div class="input-group my-3">
@@ -43,7 +44,7 @@
                         Cambiar contraseña
                     </button>
                 </h2>
-                <div id="flush-colapsar-password" class="accordion-collapse collapse" aria-labelledby="flush-password" data-bs-parent="#accordionFlushExample">
+                <div id="flush-colapsar-password" class="accordion-collapse collapse" aria-labelledby="flush-password" data-bs-parent="#acordeonPadre">
                     <form class="row my-3" action="password-usuario.php" method="POST">
                         <div class="d-grid col-11 mx-auto">
                             <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña" autocomplete="off">
@@ -63,7 +64,7 @@
                         Cambiar imagen del perfil
                     </button>
                 </h2>
-                <div id="flush-colapsar-perfil" class="accordion-collapse collapse" aria-labelledby="flush-perfil" data-bs-parent="#accordionFlushExample">
+                <div id="flush-colapsar-perfil" class="accordion-collapse collapse" aria-labelledby="flush-perfil" data-bs-parent="#acordeonPadre">
                     <form class="row" action="imagen-usuario.php" enctype="multipart/form-data">
                         <div class="d-grid col-11 mx-auto">
                             <div class="input-group my-3">
