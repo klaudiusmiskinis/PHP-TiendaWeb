@@ -116,5 +116,11 @@
             $variable = stripcslashes($variable);  
             return mysqli_real_escape_string($this-> getConexion(), $variable);
         }
+
+        public function adminUsuariosSelectAll() 
+        {
+            $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
+            return $result = mysqli_query($this -> getConexion(), $query);
+        }
     }
 ?>
