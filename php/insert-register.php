@@ -8,13 +8,9 @@
         $password = $_POST['password']; 
         $email = strtolower($email);
 
-        //PARA PREVENIR INYECCIÓN SQL
-        $nombre = stripcslashes($nombre);
-        $email = stripcslashes($email);
-        $password = stripcslashes($password);  
-        $nombre = mysqli_real_escape_string($conexion -> getConexion(), $nombre);
-        $email = mysqli_real_escape_string($conexion -> getConexion(), $email);  
-        $password = mysqli_real_escape_string($conexion -> getConexion(), password_hash($password, PASSWORD_BCRYPT, [10]));
+        $nombre = $conexion -> prevenirInyeccion($nombre);
+        $email = $conexion -> prevenirInyeccion($email);
+        $password = $conexion -> prevenirInyeccion(mysqli_real_escape_string($conexion -> getConexion(), password_hash($password, PASSWORD_BCRYPT, [10])));
         $url = $conexion -> insertRegister($nombre, $email, $password);
         header('Location: '.$url);
     } 
