@@ -22,6 +22,6 @@
     </div>
 </div>
 <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
-<?php componenteScripts(); ?>
 <?php popupCerrar(); ?>
+<?php componenteScripts(); ?>
 </body>
