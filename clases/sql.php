@@ -75,10 +75,35 @@
             $this -> setConexion(mysqli_connect($this -> servidor, $this -> usuario, $this -> password, $this -> database));
         }
 
-        public function authLogin($email) 
+        public function authLogin($email, $password) 
         {
             $consulta = "SELECT * FROM usuario WHERE (email = '$email')";
-            return $this -> getConexion() -> query($consulta);
+            $resultado = $this -> getConexion() -> query($consulta);
+            $row = $resultado -> fetch_assoc();
+        
+            if (password_verify($password, $row['password'])) {
+                $url = '../vistas/home.php';
+                $usuario = new Usuario($row['id'], $row['nombre'], $row['email'], $row['password'], $row['avatar'], $row['rol']);
+                $_SESSION['usuario'] = $usuario;
+            } else {
+                $url = '../vistas/index.php?error=incorrecto';          
+            }
+            return $url;
+        }
+
+        public function insertRegister($nombre, $email, $password)
+        {
+            $sql = "SELECT email FROM usuario WHERE email = '$email'";
+            $result = $this -> getConexion()->query($sql);
+            if ($result->num_rows == 0) {
+                    $sql = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `avatar`) VALUES ('$nombre','$email','$password','none')";
+                if ($this -> getConexion()->query($sql)) {
+                    $url = '../vistas/index.php?registrado=correcto';
+                }
+            } else {
+                $url = '../vistas/index.php?error=existe';
+            }
+            return $url;
         }
     }
 ?>
