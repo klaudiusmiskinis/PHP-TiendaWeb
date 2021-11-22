@@ -92,7 +92,7 @@
                     <div class="collapse" id="desplegar-perfil">
                         <div class="container-fluid d-grid gap-1 mt-1">
                             <a href="./perfil.php" class="btn btn btn-outline-light shadow-sm">Editar perfil</a>
-                            <a class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#popup-salir">Cerrar sesión</a>
+                            <a class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#modal-salir">Cerrar sesión</a>
                             <hr>
                         </div>
                     </div>
