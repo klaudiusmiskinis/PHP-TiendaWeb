@@ -27,16 +27,16 @@ function listar() {
 }
 
 function filas($row) { ?>
-<tr>
+    <tr>
         <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['nombre']; ?></td>
         <td><?php echo $row['email']; ?></td>
         <td><?php echo 'img/base64';?></td>
         <td><?php echo $row['rol']; ?></td>
         <td class="text-center">
-            <a class="text-dark" href="./modificar-admin.php?id=<?php echo $row['id']; ?>">
+            <a class="text-dark" href="./modificar-usuario.php?id=<?php echo $row['id']; ?>">
                 <?php generarIconEngranaje(); ?>
             </a>
         </td>
-</tr>
+    </tr>
 <?php } ?> 
