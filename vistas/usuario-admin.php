@@ -29,11 +29,10 @@
                 <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalCrearUsuario">Crear un usuario</button>
                 <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalEditarUsuario">Editar un usuario</button>
                 <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalEliminarUsuario">Eliminar un usuario</button>
-                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalTodosUsuarios">Ver todos los usuarios</button>
             </div>
         </div>
     </div>
-    
+
     <?php modalCerrar(); ?>
     <?php formModalCrearUsuario(); ?>
     <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
