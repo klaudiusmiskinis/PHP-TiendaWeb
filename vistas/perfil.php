@@ -8,7 +8,7 @@
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');
-    include('../componentes/popups.php');
+    include('../componentes/modal.php');
     $usuario = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['email'], $_SESSION['password'], $_SESSION['avatar'], $_SESSION['rol']);
     componenteHead('Perfil');
     componenteBackground();
@@ -79,6 +79,6 @@
     </div>
     
     <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
-    <?php popupCerrar(); ?>
+    <?php modalCerrar(); ?>
     <?php componenteScripts(); ?>
 </body>
