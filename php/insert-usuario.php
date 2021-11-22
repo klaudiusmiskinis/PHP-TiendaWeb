@@ -5,7 +5,8 @@
         $nombre = $_POST['nombre'];
         $email = $_POST['email'];
         $password = $_POST['password']; 
-        $email = stripcslashes($email);  
+        $rol = $_POST['rol'];
+        $avatar = $_POST['avatar'];
         $password = stripcslashes($password);  
         $email = mysqli_real_escape_string($conexion -> getConexion(), $email);  
         $password = mysqli_real_escape_string($conexion -> getConexion(), $password);
