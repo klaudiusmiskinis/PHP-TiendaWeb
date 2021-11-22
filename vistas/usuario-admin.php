@@ -27,8 +27,6 @@
         <div class="row bg-dark rounded my-1">
             <div class="col p-2 d-grid gap-2">
                 <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalCrearUsuario">Crear un usuario</button>
-                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalEditarUsuario">Editar un usuario</button>
-                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalEliminarUsuario">Eliminar un usuario</button>
             </div>
         </div>
     </div>
