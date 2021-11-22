@@ -17,7 +17,7 @@
                 <a class="nav-link" id="item-ofertas" href="./ofertas.php"><?php generarIconOfertas(); ?></a>
             </div>
             <div class="bg-dark text-light p-2 rounded">
-                <a data-bs-toggle="modal" data-bs-target="#popup-salir">
+                <a data-bs-toggle="modal" data-bs-target="#modal-salir">
                    <?php generarIconLogOut(); ?>
                 </a>
             </div>
