@@ -2,7 +2,7 @@
     session_start();
     if (empty($_SESSION['id'])) {
         header("Location: index.php");
-   }
+    }
     include('../clases/usuario.php');
     include('../componentes/background.php');
     include('../componentes/scripts.php');
