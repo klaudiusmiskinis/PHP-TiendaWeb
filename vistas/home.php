@@ -9,7 +9,7 @@
     include('../componentes/navbar.php');
     include('../componentes/head.php');
     include('../componentes/panel-lateral.php');
-    include('../componentes/popups.php');
+    include('../componentes/modal.php');
     $usuario = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['email'], $_SESSION['password'], $_SESSION['avatar'], $_SESSION['rol']);
     componenteHead('Home');
 ?>
@@ -22,6 +22,6 @@
     </div>
 </div>
 <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
-<?php popupCerrar(); ?>
+<?php modalCerrar(); ?>
 <?php componenteScripts(); ?>
 </body>
