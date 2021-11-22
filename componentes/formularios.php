@@ -6,7 +6,7 @@
                     <h5 class="modal-title text-light">Crear un nuevo usuario</h5>
                 </div>
                 <div class="modal-body border-bottom border-light text-center">
-                    <form action="../php/insert-usuario.php" method="POST" id="crearUsuarioForm">
+                    <form action="../php/insert-usuario.php" method="POST" enctype="multipart/form-data" id="crearUsuarioForm">
                         <div class="form-floating mb-3">
                             <input type="text" name="nombre" class="form-control text-dark" autocomplete="off" required>
                             <label for="nombre">Nombre del nuevo usuario</label>
@@ -29,6 +29,9 @@
                         <div class="mb-3 text-start bg-light rounded">
                             <small for="rol" class="text-secondary mx-3 mt-2">Avatar del nuevo usuario</small>
                             <input type="file" name="avatar" class="form-control text-dark" accept="image/png, image/jpeg, image/jpg" autocomplete="off">
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-outline-light">Crear usuario</button>
                         </div>
                     </form>
                 </div>

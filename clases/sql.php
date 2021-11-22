@@ -111,6 +111,21 @@
             return $url;
         }
 
+        public function insertUsuario($nombre, $email, $password, $rol, $avatar)
+        {
+            $sql = "SELECT email FROM usuario WHERE email = '$email'";
+            $result = $this -> getConexion()->query($sql);
+            if ($result->num_rows == 0) {
+                    $sql = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `rol`, `avatar`) VALUES ('$nombre','$email','$password', '$rol', '$avatar')";
+                if ($this -> getConexion()->query($sql)) {
+                    $url = '../vistas/usuario-admin.php?registrado=correcto';
+                }
+            } else {
+                $url = '../vistas/usuario-admin.php?error=existe';
+            }
+            return $url;
+        }
+
         public function prevenirInyeccion($variable)
         {
             $variable = stripcslashes($variable);  
