@@ -1,8 +1,5 @@
 <?php
     include("../database/conexion.php");
-    include("../clases/usuario.php");
-    $usuario;
-    $url;
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST['email'];
