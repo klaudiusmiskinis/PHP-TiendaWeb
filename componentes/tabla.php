@@ -7,7 +7,8 @@
                     <th class="border-bottom border-end border-dark">Nombre</th>
                     <th class="border-bottom border-end border-dark">Email</th>
                     <th class="border-bottom border-end border-dark">Avatar</th>
-                    <th class="border-bottom border-dark">Rol</th>
+                    <th class="border-bottom border-end border-dark">Rol</th>
+                    <th class="border-bottom border-end border-dark text-center">Editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,10 +28,15 @@ function listar() {
 
 function filas($row) { ?>
 <tr>
-      <td><?php echo $row['id']; ?></td>
-      <td><?php echo $row['nombre']; ?></td>
-      <td><?php echo $row['email']; ?></td>
-      <td><?php echo 'img/base64';?></td>
-      <td><?php echo $row['rol']; ?></td>
+        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['nombre']; ?></td>
+        <td><?php echo $row['email']; ?></td>
+        <td><?php echo 'img/base64';?></td>
+        <td><?php echo $row['rol']; ?></td>
+        <td class="text-center">
+            <a class="text-dark" href="./modificar-admin.php?id=<?php echo $row['id']; ?>">
+                <?php generarIconEngranaje(); ?>
+            </a>
+        </td>
 </tr>
 <?php } ?> 
