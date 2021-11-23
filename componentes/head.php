@@ -12,7 +12,6 @@
         <link rel='stylesheet' href='../assets/css/panel-lateral.css'>
         <link rel='stylesheet' href='../assets/css/scrollbar.css'>
         <link rel='stylesheet' href='../assets/css/clases.css'>
-        <link rel='stylesheet' href='../assets/css/fondo.css'>
         <link rel='stylesheet' href='../assets/css/var.css'>
         <link rel='icon' href='../assets/img/icono.png'>
         <title><?php echo $titulo ?></title>
