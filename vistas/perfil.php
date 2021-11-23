@@ -4,14 +4,14 @@
         header("Location: index.php");
     }
     include('../componentes/panel-lateral.php');
-    include('../componentes/background.php');
+    
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');
     include('../componentes/modal.php');
     $usuario = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['email'], $_SESSION['password'], $_SESSION['avatar'], $_SESSION['rol']);
     componenteHead('Perfil');
-    componenteBackground();
+    
 ?>
 
 <body>
