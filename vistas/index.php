@@ -4,10 +4,8 @@
         header('Location: home.php');
     }
     include('../componentes/head.php');
-    include('../componentes/background.php');
     include('../componentes/scripts.php');
     componenteHead('Login');
-    componenteBackground();
 ?>
 
 <body>
