@@ -126,6 +126,15 @@
             return $url;
         }
 
+        public function updateUsuario($id, $nombre, $email, $password, $rol) 
+        {
+            try {
+                $sql = "UPDATE `usuario` SET `nombre`='$nombre',`email`='$email',`password`='$password', `rol`='$rol' WHERE id = $id";
+                $this -> getConexion()->query($sql);
+            } catch (Error) {}
+            return '../vistas/usuario-admin.php';
+        }
+
         public function prevenirInyeccion($variable)
         {
             $variable = stripcslashes($variable);  
@@ -135,7 +144,14 @@
         public function adminUsuariosSelectAll() 
         {
             $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
-            return $result = mysqli_query($this -> getConexion(), $query);
+            return $resultado = mysqli_query($this -> getConexion(), $query);
+        }
+
+        public function selectUserById($id) 
+        {
+            $query = "SELECT * FROM usuario WHERE id = $id";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
         }
     }
 ?>
