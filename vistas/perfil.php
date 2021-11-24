@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="accordion accordion-flush" id="acordeonPadre">
             <!-- CAMBIAR NOMBRE DEL PERFIL -->
-            <div class="accordion-item bg-dark text-light rounded mb-2">
+            <div class="accordion-item bg-color text-dark rounded mb-2">
                 <h2 class="accordion-header" id="flush-nombre">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-colapsar-nombre" aria-expanded="false" aria-controls="flush-colapsar-nombre">
                         Cambiar nombre de usuario
@@ -39,7 +39,7 @@
             </div>
 
             <!-- CAMBIAR CONTRASEÑA -->
-            <div class="accordion-item bg-dark text-light rounded mb-2">
+            <div class="accordion-item bg-color text-dark rounded mb-2">
                 <h2 class="accordion-header" id="flush-password">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-colapsar-password" aria-expanded="false" aria-controls="flush-colapsar-password">
                         Cambiar contraseña
@@ -59,7 +59,7 @@
             </div>
 
             <!-- CAMBIAR IMAGEN DEL PERFIL -->
-            <div class="accordion-item bg-dark text-light rounded">
+            <div class="accordion-item bg-color text-dark rounded">
                 <h2 class="accordion-header" id="flush-perfil">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-colapsar-perfil" aria-expanded="false" aria-controls="flush-colapsar-perfil">
                         Cambiar imagen del perfil
