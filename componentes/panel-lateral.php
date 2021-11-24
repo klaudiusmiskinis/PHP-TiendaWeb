@@ -2,7 +2,7 @@
     function componentePanel($nombre, $rol) {
     $nombre = strtok($nombre, ' '); 
 ?>
-<div class="offcanvas offcanvas-start bg-dark text-light" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="panel-lateral">
+<div class="offcanvas offcanvas-start bg-color text-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="panel-lateral">
     <div class="offcanvas-header text-center">
         <h5 class="offcanvas-title" id="panel-lateral">Panel de usuario</h5>
         <small class="text-muted"><?php echo '('.$nombre.')'; ?></small>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="collapse" id="desplegar-categorias">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn btn-outline-light shadow-sm">Gestionar categorias</a>
+                            <a class="btn btn btn-outline-light shadow-sm" href="./categoria-admin.php">Gestionar categorias</a>
                             <hr>
                         </div>
                     </div>
