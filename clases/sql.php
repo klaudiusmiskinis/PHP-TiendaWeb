@@ -75,6 +75,12 @@
             $this -> setConexion(mysqli_connect($this -> servidor, $this -> usuario, $this -> password, $this -> database));
         }
 
+        public function prevenirInyeccion($variable)
+        {
+            $variable = stripcslashes($variable);  
+            return mysqli_real_escape_string($this-> getConexion(), $variable);
+        }
+
         public function authLogin($email, $password) 
         {
             $consulta = "SELECT * FROM usuario WHERE (email = '$email')";
@@ -132,10 +138,11 @@
             return '../vistas/usuario-admin.php';
         }
 
-        public function prevenirInyeccion($variable)
+        public function deleteUsuario($id) 
         {
-            $variable = stripcslashes($variable);  
-            return mysqli_real_escape_string($this-> getConexion(), $variable);
+            $query = "DELETE FROM `usuario` WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/usuario-admin.php';
         }
 
         public function adminUsuariosSelectAll() 
@@ -151,11 +158,6 @@
             return $resultado -> fetch_assoc();
         }
 
-        public function deleteUsuario($id) 
-        {
-            $query = "DELETE FROM `usuario` WHERE id = $id";
-            $this -> getConexion()->query($query);
-            return '../vistas/usuario-admin.php';
-        }
+        
     }
 ?>
