@@ -92,8 +92,9 @@
                     </select>
                     <label for="rol">Rol del nuevo usuario</label>
                 </div>
-                <div class="d-grid m-2">
+                <div class="d-grid gap-2 m-2">
                     <button type="submit" class="btn btn-outline-light">Actualizar usuario</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-eliminar-usuario">Eliminar usuario</button>
                 </div>
             </form>
         </div>
