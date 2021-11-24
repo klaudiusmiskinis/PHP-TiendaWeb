@@ -2,6 +2,7 @@
     session_start();
     if (empty($_SESSION['nombre'])) {
         header("Location: index.php");
+        exit();
     }
     include('../componentes/panel-lateral.php');
     

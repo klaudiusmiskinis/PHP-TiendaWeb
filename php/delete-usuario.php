@@ -4,5 +4,6 @@
         $id = $_POST['idDelete'];
         $url = $conexion -> deleteUsuario($id);
         header('Location: '.$url);
+        exit();
     } 
 ?>

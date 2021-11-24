@@ -2,6 +2,7 @@
     session_start();
     if (empty($_SESSION['id'])) {
         header("Location: index.php");
+        exit();
     }
     include('../clases/usuario.php');
     

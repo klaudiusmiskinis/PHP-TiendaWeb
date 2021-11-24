@@ -12,5 +12,6 @@
         $rol = $conexion -> prevenirInyeccion($_POST['rol']);
         $url = $conexion -> updateUsuario($id, $nombre, $email, $password, $rol);
         header('Location: '.$url);
+        exit();
     } 
 ?>

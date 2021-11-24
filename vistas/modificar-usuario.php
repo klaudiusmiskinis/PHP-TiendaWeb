@@ -3,6 +3,7 @@
     session_start();
     if ($_SESSION['rol'] != 'admin') {
         header("Location: index.php");
+        exit();
     }
 
     include('../clases/usuario.php');
@@ -17,6 +18,7 @@
     $id = $_GET['id'];
     if (empty($id)){
         header("Location: index.php");
+        exit();
     }
 
     componenteHead('ADMIN | Modificar');

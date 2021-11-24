@@ -10,4 +10,5 @@
         $avatar = 'data:image/;base64,'.base64_encode($avatar);
         $url = $conexion -> insertUsuario($nombre, $email, $password, $rol, $avatar);
         header('Location: '.$url);
+        exit();
 } ?>

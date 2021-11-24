@@ -10,5 +10,6 @@
         $password = mysqli_real_escape_string($conexion -> getConexion(), $password);
         $url = $conexion -> authLogin($email, $password);
         header('Location: '.$url);
+        exit();
     } 
 ?>

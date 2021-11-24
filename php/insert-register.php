@@ -8,5 +8,6 @@
         $password = $conexion -> prevenirInyeccion(mysqli_real_escape_string($conexion -> getConexion(), password_hash($_POST['password'], PASSWORD_BCRYPT, [10])));
         $url = $conexion -> insertRegister($nombre, $email, $password);
         header('Location: '.$url);
+        exit();
     } 
 ?>

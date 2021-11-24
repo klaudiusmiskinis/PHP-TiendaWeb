@@ -2,6 +2,7 @@
     session_start();
     if (array_key_exists('id', $_SESSION)){
         header('Location: home.php');
+        exit();
     }
     include('../componentes/head.php');
     include('../componentes/scripts.php');
