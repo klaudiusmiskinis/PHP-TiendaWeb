@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
-    --principal: #191919;
-    --dark: #212529;
+    --oscuro: #191919;
+    --principal: #4da6ff;
     --principal-low: #666666;
     --b: #fff;
     --b-hover: grey;
-}
-
-@keyframes move {
-    100% {
-        transform: translate3d(0, 0, 1px) rotate(360deg);
-    }
 }
