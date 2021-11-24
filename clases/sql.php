@@ -80,7 +80,6 @@
             $consulta = "SELECT * FROM usuario WHERE (email = '$email')";
             $resultado = $this -> getConexion() -> query($consulta);
             $row = $resultado -> fetch_assoc();
-        
             if (password_verify($password, $row['password'])) {
                 session_start();
                 $url = '../vistas/home.php';
@@ -98,11 +97,11 @@
 
         public function insertRegister($nombre, $email, $password)
         {
-            $sql = "SELECT email FROM usuario WHERE email = '$email'";
-            $result = $this -> getConexion()->query($sql);
+            $query = "SELECT email FROM usuario WHERE email = '$email'";
+            $result = $this -> getConexion()->query($query);
             if ($result->num_rows == 0) {
-                    $sql = "INSERT INTO `usuario`(`nombre`, `email`, `password`) VALUES ('$nombre','$email','$password')";
-                if ($this -> getConexion()->query($sql)) {
+                    $query = "INSERT INTO `usuario`(`nombre`, `email`, `password`) VALUES ('$nombre','$email','$password')";
+                if ($this -> getConexion()->query($query)) {
                     $url = '../vistas/index.php?registrado=correcto';
                 }
             } else {
@@ -113,11 +112,11 @@
 
         public function insertUsuario($nombre, $email, $password, $rol, $avatar)
         {
-            $sql = "SELECT email FROM usuario WHERE email = '$email'";
-            $result = $this -> getConexion()->query($sql);
+            $query = "SELECT email FROM usuario WHERE email = '$email'";
+            $result = $this -> getConexion()->query($query);
             if ($result->num_rows == 0) {
-                    $sql = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `rol`, `avatar`) VALUES ('$nombre','$email','$password', '$rol', '$avatar')";
-                if ($this -> getConexion()->query($sql)) {
+                    $query = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `rol`, `avatar`) VALUES ('$nombre','$email','$password', '$rol', '$avatar')";
+                if ($this -> getConexion()->query($query)) {
                     $url = '../vistas/usuario-admin.php?registrado=correcto';
                 }
             } else {
@@ -128,10 +127,8 @@
 
         public function updateUsuario($id, $nombre, $email, $password, $rol) 
         {
-            try {
-                $sql = "UPDATE `usuario` SET `nombre`='$nombre',`email`='$email',`password`='$password', `rol`='$rol' WHERE id = $id";
-                $this -> getConexion()->query($sql);
-            } catch (Error) {}
+            $query = "UPDATE `usuario` SET `nombre`='$nombre',`email`='$email',`password`='$password', `rol`='$rol' WHERE id = $id";
+            $this -> getConexion()->query($query);
             return '../vistas/usuario-admin.php';
         }
 
@@ -144,7 +141,7 @@
         public function adminUsuariosSelectAll() 
         {
             $query = "SELECT id, nombre, email, avatar, rol FROM usuario ORDER BY id";
-            return $resultado = mysqli_query($this -> getConexion(), $query);
+            return mysqli_query($this -> getConexion(), $query);
         }
 
         public function selectUserById($id) 
@@ -152,6 +149,13 @@
             $query = "SELECT * FROM usuario WHERE id = $id";
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
+        }
+
+        public function deleteUsuario($id) 
+        {
+            $query = "DELETE FROM `usuario` WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/usuario-admin.php';
         }
     }
 ?>
