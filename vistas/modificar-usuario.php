@@ -20,8 +20,8 @@
         header("Location: index.php");
         exit();
     }
-
-    componenteHead('ADMIN | Modificar');
+    echo $conexion -> selectUserById(11);
+    componenteHead('ADMIN | Modificar usuario');
 ?>
 <body>
     <?php componenteNavbar($usuario -> getNombre()); ?>
