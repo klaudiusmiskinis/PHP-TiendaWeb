@@ -19,13 +19,13 @@
     <?php componenteNavbar($usuario -> getNombre()); ?>
 
     <div class="container-fluid">
-        <div class="row bg-dark rounded my-1">
+        <div class="row bg-color rounded my-1">
             <?php tablaUsuarios(); ?>
         </div>
     </div>
 
     <div class="container-fluid">
-        <div class="row bg-dark rounded my-1">
+        <div class="row bg-color rounded my-1">
             <div class="col p-2 d-grid gap-2">
                 <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalCrearUsuario">Crear un usuario</button>
             </div>
