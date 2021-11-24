@@ -62,24 +62,6 @@
     </div>
 <?php } ?>
 
-<?php function formModalTodosUsuarios() { ?>
-    <div class="modal fade" id="formModalTodosUsuarios" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content bg-dark text-light">
-                <div class="modal-header border-bottom border-light text-center justify-content-center">
-                    <h5 class="modal-title">Lista de todos los usuarios</h5>
-                </div>
-                <div class="modal-body border-bottom border-light text-center">
-                    <?php tablaUsuarios(); ?> 
-                </div>
-                <div class="d-grid m-3">
-                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php } ?>
-
 <?php function formModificarUsuario($usuario) { ?>
     <div class="container-fluid">
         <div class="row bg-dark rounded p-2">
