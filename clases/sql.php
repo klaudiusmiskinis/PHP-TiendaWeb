@@ -151,6 +151,12 @@
             return mysqli_query($this -> getConexion(), $query);
         }
 
+        public function adminCategoriasSelectAll() 
+        {
+            $query = "SELECT id, nombre FROM categorias ORDER BY id";
+            return mysqli_query($this -> getConexion(), $query);
+        }
+
         public function selectUserById($id) 
         {
             $query = "SELECT * FROM usuario WHERE id = $id";
