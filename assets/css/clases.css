@@ -16,28 +16,13 @@
     color: var(--b) !important;
 }
 
-.btn-outline-dark {
-    border-radius: 0.25rem;
-    border: 1px solid transparent !important;
-    color: var(--principal) !important;
-    transition: 0.5s !important;
-    background-color: var(--b) !important;
-}
-
-.btn-outline-dark:hover {
-    color: var(--b) !important;
+.bg-color {
     background-color: var(--principal) !important;
 }
 
-.btn-negro {
-    color: var(--b) !important;
+.btn-color {
     background-color: var(--principal) !important;
-    border: 1px solid var(--principal) !important;
-}
-
-.btn-negro:hover {
-    color: var(--principal) !important;
-    background-color: var(--b) !important;
+    color: var(--oscuro);
 }
 
 .blur {
@@ -45,12 +30,12 @@
 }
 
 .svg {
-    fill: var(--b);
+    fill: var(--oscuro);
     transition: 0.4s;
 }
 
 .svg:hover {
-    fill: grey;
+    fill: var(--b);
     transition: 0.4s;
 }
 
