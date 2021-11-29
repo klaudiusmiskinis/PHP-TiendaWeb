@@ -19,15 +19,30 @@
     <?php componenteNavbar($usuario -> getNombre()); ?>
 
     <div class="container-fluid">
-        <div class="row bg-color rounded my-1">
-            <?php tablaUsuarios(); ?>
+        <div class="row text-center">
+            <div class="col-sm-auto bg-color rounded-top">
+                <div class="d-flex">
+                    <i class="bi bi-people-fill text-light py-2 px-2 icono"></i>
+                    <h5 class="px-2 py-2 text-light">Todos los usuarios</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col bg-color rounded-end rounded-bottom d-grid p-2">
+                <?php tablaUsuarios(); ?>
+            </div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <div class="row bg-color rounded my-1">
-            <div class="col p-2 d-grid gap-2">
-                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalCrearUsuario">Crear un usuario</button>
+        <div class="row gap-2 my-2">
+            <div class="col-sm-auto bg-color rounded d-grid px-2 py-2 text-center">
+            <button class="btn btn-outline-color">
+                <i class="bi bi-person-plus-fill mt-2 icono"></i>
+            </button>
+            </div>
+            <div class="col bg-color rounded d-grid p-2">
+                <button class="btn btn-outline-color" data-bs-toggle="modal" data-bs-target="#formModalCrearUsuario">Crear un usuario</button>
             </div>
         </div>
     </div>

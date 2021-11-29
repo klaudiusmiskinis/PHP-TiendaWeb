@@ -2,8 +2,13 @@
 
 :root {
     --oscuro: #191919;
-    --principal: #4da6ff;
-    --principal-low: #666666;
-    --b: #fff;
+    --principal: #0077ff;
+    --principal-low: #d9ebff;
     --b-hover: grey;
+    --b: #fff;
+}
+
+::selection {
+    background-color: grey;
+    color: var(--oscuro);
 }

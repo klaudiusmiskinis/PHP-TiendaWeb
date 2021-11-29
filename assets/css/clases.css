@@ -3,7 +3,7 @@
 }
 
 .form-control:focus {
-    background-color: var(--principal-low) !important;
+    background-color: var(--principal) !important;
     border-color: var(--g) !important;
     color: var(--b) !important;
     box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.473);
@@ -11,7 +11,7 @@
 }
 
 .form-control:hover {
-    background-color: var(--principal-low) !important;
+    background-color: var(--principal) !important;
     border-color: var(--b) !important;
     color: var(--b) !important;
 }
@@ -39,6 +39,10 @@
     transition: 0.4s;
 }
 
+.icono {
+    font-size: 1.2rem;
+}
+
 .salir:hover {
     fill: var(--bs-red);
     transition: 0.4s;
@@ -62,8 +66,6 @@
 }
 
 .row {
-    padding-left: 0.1rem !important;
-    padding-right: 0.1rem !important;
     --bs-gutter-x: 0 !important
 }
 
@@ -83,10 +85,50 @@
 
 .accordion-button {
     background-color: var(--dark) !important;
-    color: var(--b);
     border-bottom: 1px solid var(--b);
+    color: var(--b);
 }
 
 .btn-close:focus {
     box-shadow: 0 0 0 0.25rem transparent;
+}
+
+.btn-outline-color {
+    color: var(--principal);
+    border: 1px solid var(--principal);
+    background-color: var(--b);
+}
+
+.btn-outline-color:hover {
+    color: var(--principal);
+    border: 1px solid var(--b);
+    background-color: var(--principal-low);
+}
+
+.border-color {
+    border: 1px solid;
+    border-color: var(--principal) !important;
+}
+
+.border-dark {
+    border-color: transparent !important;
+}
+
+.text-color {
+    color: var(--principal) !important;
+}
+
+.table {
+    background-color: var(--b);
+    border-color: transparent !important;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 18px;
+    border-bottom: 1px solid transparent;
+}
+
+thead {
+    background-color: var(--principal);
+    color: var(--b);
 }
