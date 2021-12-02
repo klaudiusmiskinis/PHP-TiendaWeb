@@ -20,8 +20,8 @@
 <?php function modalConfirmarEliminarUsuario($usuario) { ?>
     <div class="modal fade" id="modal-eliminar-usuario" tabindex="-1">
         <div class="modal-dialog">
-            <div class="modal-content bg-color text-dark">
-                <div class="modal-header border-bottom border-light text-center justify-content-center">
+            <div class="modal-content bg-light text-light">
+                <div class="modal-header text-center justify-content-center">
                     <h5 class="modal-title">Confirmar eliminar usuario</h5>
                 </div>
                 <div class="modal-body border-bottom border-light text-center">
@@ -35,4 +35,5 @@
             </div>
         </div>
     </div>
+    
 <?php } ?>

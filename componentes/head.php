@@ -8,12 +8,12 @@
         <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
         <link rel='stylesheet' href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel='stylesheet' href="../node_modules/datatables.net-dt/css/jquery.dataTables.min.css">
-        <link rel='stylesheet' href='../assets/css/style-general.css'>
-        <link rel='stylesheet' href='../assets/css/panel-lateral.css'>
-        <link rel='stylesheet' href='../assets/css/scrollbar.css'>
-        <link rel='stylesheet' href='../assets/css/clases.css'>
-        <link rel='stylesheet' href='../assets/css/var.css'>
-        <link rel='icon' href='../assets/img/icono.png'>
+        <link rel='stylesheet' href='../assets/css/style-general.css?v=<?php echo time(); ?>">'>
+        <link rel='stylesheet' href='../assets/css/panel-lateral.css?v=<?php echo time(); ?>">'>
+        <link rel='stylesheet' href='../assets/css/scrollbar.css?v=<?php echo time(); ?>">'>
+        <link rel='stylesheet' href='../assets/css/clases.css?v=<?php echo time(); ?>">'>
+        <link rel='stylesheet' href='../assets/css/var.css?v=<?php echo time(); ?>">'>
+        <link rel='icon' href='../assets/img/icono.png?v=<?php echo time(); ?>">'>
         <title><?php echo $titulo ?></title>
     </head>
 <?php } ?>

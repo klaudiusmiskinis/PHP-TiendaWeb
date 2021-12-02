@@ -3,26 +3,10 @@
 }
 
 .form-control:focus {
-    background-color: var(--principal) !important;
-    border-color: var(--g) !important;
+    background-color: var(--b-hover) !important;
     color: var(--b) !important;
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.473);
+    box-shadow: 0 0 0 0.05rem var(--principal-low);
     transition: 0.5s !important;
-}
-
-.form-control:hover {
-    background-color: var(--principal) !important;
-    border-color: var(--b) !important;
-    color: var(--b) !important;
-}
-
-.bg-color {
-    background-color: var(--principal) !important;
-}
-
-.btn-color {
-    background-color: var(--principal) !important;
-    color: var(--oscuro);
 }
 
 .blur {
@@ -30,12 +14,12 @@
 }
 
 .svg {
-    fill: var(--oscuro);
+    fill: var(--b);
     transition: 0.4s;
 }
 
 .svg:hover {
-    fill: var(--b);
+    fill: var(--b-hover);
     transition: 0.4s;
 }
 
@@ -105,8 +89,22 @@
     background-color: var(--principal-low);
 }
 
+.bg-color {
+    background-color: var(--principal) !important;
+}
+
+.btn-color {
+    background-color: var(--principal) !important;
+    border-color: var(--principal) !important;
+    color: var(--b) !important;
+}
+
+.btn-color:hover {
+    background-color: var(--b) !important;
+    color: var(--principal) !important;
+} 
+
 .border-color {
-    border: 1px solid;
     border-color: var(--principal) !important;
 }
 

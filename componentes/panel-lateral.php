@@ -2,8 +2,8 @@
     function componentePanel($nombre, $rol) {
     $nombre = strtok($nombre, ' '); 
 ?>
-<div class="offcanvas offcanvas-start bg-color text-dark" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="panel-lateral">
-    <div class="offcanvas-header text-center">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="panel-lateral">
+    <div class="offcanvas-header text-light bg-color">
         <h5 class="offcanvas-title" id="panel-lateral">Panel de usuario</h5>
         <small class="text-muted"><?php echo '('.$nombre.')'; ?></small>
     </div>
@@ -22,11 +22,11 @@
                 <!-- ADMIN | USUARIOS -->
                 <div class="row text-center">
                     <div class="col d-grid gap-1">
-                        <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-usuarios" aria-expanded="false" aria-controls="desplegar-usuarios">· Usuarios ·</button>
+                        <button class="btn btn-color shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-usuarios" aria-expanded="false" aria-controls="desplegar-usuarios">· Usuarios ·</button>
                     </div>
                     <div class="collapse" id="desplegar-usuarios">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn-outline-light shadow-sm" href="./usuario-admin.php">Gestionar usuarios</a>
+                            <a class="btn btn-color bg-opacity-50 shadow-sm" href="./usuario-admin.php">Gestionar usuarios</a>
                             <hr>
                         </div>
                     </div>
@@ -35,11 +35,11 @@
                 <!-- ADMIN | PRODUCTOS -->
                 <div class="row text-center mt-1">
                     <div class="col d-grid gap-1">
-                        <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-productos" aria-expanded="false" aria-controls="desplegar-productos">· Productos ·</button>
+                        <button class="btn btn-color shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-productos" aria-expanded="false" aria-controls="desplegar-productos">· Productos ·</button>
                     </div>
                     <div class="collapse" id="desplegar-productos">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn-outline-light shadow-sm">Gestionar productos</a>
+                            <a class="btn btn-color shadow-sm">Gestionar productos</a>
                             <hr>
                         </div>
                     </div>
@@ -48,11 +48,11 @@
                 <!-- ADMIN |CATEGORIAS -->
                 <div class="row text-center mt-1">
                     <div class="col d-grid gap-1">
-                        <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-categorias" aria-expanded="false" aria-controls="desplegar-categorias">· Categorias ·</button>
+                        <button class="btn btn-color shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-categorias" aria-expanded="false" aria-controls="desplegar-categorias">· Categorias ·</button>
                     </div>
                     <div class="collapse" id="desplegar-categorias">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn btn-outline-light shadow-sm" href="./categoria-admin.php">Gestionar categorias</a>
+                            <a class="btn btn-color shadow-sm" href="./categoria-admin.php">Gestionar categorias</a>
                             <hr>
                         </div>
                     </div>
@@ -61,11 +61,11 @@
                 <!-- ADMIN | SUBCATEGORIAS -->
                 <div class="row text-center mt-1">
                     <div class="col d-grid gap-1">
-                        <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-subcategorias" aria-expanded="false" aria-controls="desplegar-categorias">· Subcategorias ·</button>
+                        <button class="btn btn-color shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-subcategorias" aria-expanded="false" aria-controls="desplegar-categorias">· Subcategorias ·</button>
                     </div>
                     <div class="collapse" id="desplegar-subcategorias">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn btn-outline-light shadow-sm">Gestionar subcategorias</a>
+                            <a class="btn btn-color shadow-sm">Gestionar subcategorias</a>
                             <hr>
                         </div>
                     </div>
@@ -87,17 +87,16 @@
                 <!-- USUARIO -->
                 <div class="row text-center">
                     <div class="col d-grid gap-1">
-                        <button class="btn btn-light shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-perfil" aria-expanded="false" aria-controls="desplegar-perfil">· Perfil ·</button>
+                        <button class="btn btn-color shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#desplegar-perfil" aria-expanded="false" aria-controls="desplegar-perfil">· Perfil ·</button>
                     </div>
-                    <div class="collapse" id="desplegar-perfil">
+                    <div class="collapse show" id="desplegar-perfil">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a href="./perfil.php" class="btn btn btn-outline-light shadow-sm">Editar perfil</a>
-                            <a class="btn btn-outline-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#modal-salir">Cerrar sesión</a>
+                            <a href="./perfil.php" class="btn btn-color shadow-sm">Editar perfil</a>
+                            <a class="btn btn-danger shadow-sm" data-bs-toggle="modal" data-bs-target="#modal-salir">Cerrar sesión</a>
                             <hr>
                         </div>
                     </div>
                 </div>
-                
             </div>
         <?php }; ?>
     </div>

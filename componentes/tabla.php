@@ -2,9 +2,9 @@
 
 function tablaUsuarios() { ?>
 <?php include('../database/conexion.php');?>
-    <div class="table-responsive text-dark bg-light rounded p-2" id="tabla-responsive">
-        <table class="table text-center bg-light rounded-top display" id="usuarios">
-            <thead class="rounded-top">
+    <div class="table-responsive p-2" id="tabla-responsive">
+        <table class="table text-center display" id="usuarios">
+            <thead>
                 <tr class="border-transparent">
                     <th>ID</th>
                     <th>Nombre</th>
@@ -27,7 +27,7 @@ function tablaUsuarios() { ?>
                     <td><?php echo $row['rol']; ?></td>
                     <td style="width: 3rem;">
                         <a class="text-color" href="./modificar-usuario.php?id=<?php echo $row['id']; ?>">
-                            <?php generarIconEngranaje(); ?>
+                            <i class="bi bi-wrench icono"></i>
                         </a>
                     </td>
                 </tr>
@@ -39,7 +39,7 @@ function tablaUsuarios() { ?>
 
 <?php function tablaCategoria() { ?>
 <?php include('../database/conexion.php'); ?>
-    <div class="table-responsive text-dark px-2 py-1" id="tabla-responsive">
+    <div class="table-responsive text-dark" id="tabla-responsive">
         <table class="table table-hover table-striped bg-light display" id="usuarios">
             <thead>
                 <tr>
@@ -58,7 +58,7 @@ function tablaUsuarios() { ?>
                     <td><?php echo $resultado['nombre']; ?></td>
                     <td class="text-center">
                         <a class="text-dark" href="./modificar-categoria.php?id=<?php echo $resultado['id']; ?>">
-                            <?php generarIconEngranaje(); ?>
+                            <i class="bi bi-wrench icono"></i>
                         </a>
                     </td>
                 </tr>

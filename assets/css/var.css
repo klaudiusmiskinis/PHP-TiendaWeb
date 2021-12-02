@@ -2,8 +2,8 @@
 
 :root {
     --oscuro: #191919;
-    --principal: #0077ff;
-    --principal-low: #d9ebff;
+    --principal: #000000;
+    --principal-low: #0000007e;
     --b-hover: grey;
     --b: #fff;
 }
