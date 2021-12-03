@@ -12,6 +12,4 @@ $(document).ready( function () {
     $('.dataTables_paginate').removeClass('dataTables_paginate paging_simple_numbers');
     $('.dataTables_info').addClass('float-start');
     $('.current').addClass('mx-1');
-    let config = $('.sorting')[5];
-    config.removeAttribute("class");
 });
