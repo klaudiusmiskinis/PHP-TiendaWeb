@@ -3,9 +3,9 @@
 }
 
 .form-control:focus {
-    background-color: var(--b-hover) !important;
-    color: var(--b) !important;
-    box-shadow: 0 0 0 0.05rem var(--principal-low);
+    background-color: var(--b) !important;
+    color: var(--principal) !important;
+    box-shadow: 0 0 0 0.05rem var(--b-hover) !important;
     transition: 0.5s !important;
 }
 
@@ -89,10 +89,6 @@
     background-color: var(--principal-low);
 }
 
-.bg-color {
-    background-color: var(--principal) !important;
-}
-
 .btn-color {
     background-color: var(--principal) !important;
     border-color: var(--principal) !important;
@@ -101,16 +97,9 @@
 
 .btn-color:hover {
     background-color: var(--b) !important;
+    border-color: transparent !important;
     color: var(--principal) !important;
 } 
-
-.border-color {
-    border-color: var(--principal) !important;
-}
-
-.border-dark {
-    border-color: transparent !important;
-}
 
 .text-color {
     color: var(--principal) !important;
@@ -143,9 +132,9 @@ thead {
     background-image: linear-gradient(19deg, #B721FF 0%, #21D4FD 100%);
 }
 
-.bg-gradiente {
-    background-color: #000000;
-    background-image: linear-gradient(160deg, #000000 0%, #ffffff 100%);    
+.bg-color {
+    background-color: #aeaeae;
+    background-image: linear-gradient(160deg, #aeaeae 0%, #ffffff 100%);
     background-repeat: no-repeat;
     background-size: 100% 200%;
 }
