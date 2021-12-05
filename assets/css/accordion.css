@@ -1,0 +1,19 @@
+.accordion-button:not(.collapsed) {
+    color: var(--b);
+    background-color: var(--col);
+    border-color: 1px solid white
+}
+
+.accordion-button:focus {
+    z-index: 3;
+    background-color: var(--col);
+    border-color:white !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+.accordion-button {
+    background-color: var(--dark) !important;
+    border-bottom: 1px solid var(--b);
+    color: var(--b);
+}
