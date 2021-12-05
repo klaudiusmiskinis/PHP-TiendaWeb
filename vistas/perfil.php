@@ -5,8 +5,8 @@
         exit();
     }
     include('../componentes/panel-lateral.php');
-    
     include('../componentes/scripts.php');
+    include('../clases/usuario.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');
     include('../componentes/modal.php');
