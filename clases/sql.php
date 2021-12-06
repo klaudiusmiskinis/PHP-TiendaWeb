@@ -164,6 +164,11 @@
             return $resultado -> fetch_assoc();
         }
 
-        
+        public function userStats()
+        {
+            $query = "SELECT COUNT(id) usuarios FROM `usuario`";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
     }
 ?>
