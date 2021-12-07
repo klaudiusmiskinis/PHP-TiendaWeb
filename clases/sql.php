@@ -170,5 +170,26 @@
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
+
+        public function adminRolStats()
+        {
+            $query = "SELECT COUNT(*) admins FROM `usuario` WHERE rol = 'admin'";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
+
+        public function userRolStats()
+        {
+            $query = "SELECT COUNT(*) usuarios FROM `usuario` WHERE rol = 'user'";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
+
+        public function maxId()
+        {
+            $query = "SELECT MAX(ID) id FROM usuario";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
     }
 ?>
