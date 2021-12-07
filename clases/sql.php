@@ -187,7 +187,7 @@
 
         public function maxId()
         {
-            $query = "SELECT MAX(ID) id FROM usuario";
+            $query = "SELECT AUTO_INCREMENT id FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'tienda' AND TABLE_NAME = 'usuario'";
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
