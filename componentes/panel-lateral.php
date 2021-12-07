@@ -5,7 +5,7 @@
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="panel-lateral">
     <div class="offcanvas-header text-light bg-color">
         <h5 class="offcanvas-title" id="panel-lateral">Panel de usuario</h5>
-        <small class="text-muted"><?php echo '('.$nombre.')'; ?></small>
+        <small class="text-light"><?php echo '('.$nombre.')'; ?></small>
     </div>
     
     <div class="offcanvas-body">
