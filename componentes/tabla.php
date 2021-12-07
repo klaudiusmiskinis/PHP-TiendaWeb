@@ -1,7 +1,7 @@
 <?php 
 
 function tablaUsuarios($conexion) { ?>
-    <div class="table-responsive p-2" id="tabla-responsive">
+    <div class="table-responsive border-bottom border-color p-1" id="tabla-responsive">
         <table class="table text-center display" id="usuarios">
             <thead>
                 <tr class="border-transparent">
