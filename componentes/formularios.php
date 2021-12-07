@@ -63,10 +63,10 @@
 <?php } ?>
 
 <?php function formModificarUsuario($usuario) { ?>
-    <div class="container-fluid">
-        <div class="row bg-color rounded p-2">
-            <h5 class="text-dark m-2">
-                Formulario de actualización
+    <div class="container-fluid mt-2">
+        <div class="row border border-color rounded p-2">
+            <h5 class="text-color m-2">
+                Formulario de actualización del usuario <?php echo $usuario['nombre']; ?>
             </h5>
             <form action="../php/update-usuario.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
@@ -95,9 +95,18 @@
                     </select>
                     <label for="rol">Rol del nuevo usuario</label>
                 </div>
-                <div class="d-grid gap-2 m-2">
-                    <button type="submit" class="btn btn-outline-light">Actualizar usuario</button>
-                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modal-eliminar-usuario">Eliminar usuario</button>
+                <div class="row m-2 gap-2">
+                    <div class="col d-grid">
+                        <button type="submit" class="btn btn-color">Actualizar usuario</button>
+                    </div>
+                    <div class="col d-grid">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-eliminar-usuario">Eliminar usuario</button>
+                    </div>
+                </div>
+                <div class="row m-2 gap-2">
+                    <div class="col d-grid">
+                        <a class="btn btn-color" type="button" href="./usuario-admin.php">Volver a los usuarios</a>
+                    </div>
                 </div>
             </form>
         </div>
