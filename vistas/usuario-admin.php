@@ -31,11 +31,27 @@
     </div> 
 
     <div class="container-fluid">
-        <div class="row gap-2 my-2 text-center">
-            <div class="col">A</div>
-            <div class="col">b</div>
-            <div class="col">
+    
+    <div class="row bg-color p-2 rounded my-2">
+        <h5 class="text-center text-light">Estadísticas generales de los usuarios</h5>
+    </div>
+        <div class="row gap-2">
+            <div class="col text-center">
+                <?php countRolUsers($conexion); ?>
+            </div>
+            <div class="col text-center">
+                <?php countRolAdmins($conexion); ?>
+            </div>
+            <div class="col text-center">
                 <?php countUsers($conexion); ?>
+            </div>
+        </div>
+        <div class="row gap-2">
+            <div class="col text-center">
+                <?php maxIdStats($conexion); ?>
+            </div>
+            <div class="col text-center">
+                <?php usuariosOff($conexion); ?>
             </div>
         </div>
     </div>
@@ -43,8 +59,6 @@
     <div class="container-fluid">
         <?php tablaUsuarios($conexion); ?>
     </div>
-
-    
     
     <?php modalCerrar(); ?>
     <?php formModalCrearUsuario(); ?>
