@@ -38,7 +38,7 @@
     --bs-gutter-x: 0 !important
 }
 
-.btn-close:focus {
+.btn-close:focus, .btn:focus {
     box-shadow: 0 0 0 0.25rem transparent;
 }
 
@@ -80,4 +80,17 @@
 .gradiente-invertido {
     background-color: #21D4FD;
     background-image: linear-gradient(19deg, #B721FF 0%, #21D4FD 100%);
+}
+
+.border-color {
+    border-color: var(--col) !important;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover{
+    margin-top: -5px;
+    transition: 0.3s;
 }
