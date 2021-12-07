@@ -91,6 +91,6 @@
 }
 
 .card:hover{
-    margin-top: -5px;
+    margin-top: -3px;
     transition: 0.3s;
 }
