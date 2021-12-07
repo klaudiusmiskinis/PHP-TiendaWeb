@@ -35,13 +35,13 @@
             <div class="col">A</div>
             <div class="col">b</div>
             <div class="col">
-                <?php countUsers($conexion -> userStats()); ?>
+                <?php countUsers($conexion); ?>
             </div>
         </div>
     </div>
 
     <div class="container-fluid">
-        <?php tablaUsuarios(); ?>
+        <?php tablaUsuarios($conexion); ?>
     </div>
 
     

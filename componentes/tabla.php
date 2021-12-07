@@ -1,7 +1,6 @@
 <?php 
 
-function tablaUsuarios() { ?>
-<?php include('../database/conexion.php');?>
+function tablaUsuarios($conexion) { ?>
     <div class="table-responsive p-2" id="tabla-responsive">
         <table class="table text-center display" id="usuarios">
             <thead>
@@ -37,8 +36,7 @@ function tablaUsuarios() { ?>
     </div>
 <?php } ?>
 
-<?php function tablaCategoria() { ?>
-<?php include('../database/conexion.php'); ?>
+<?php function tablaCategoria($conexion) { ?>
     <div class="table-responsive text-dark" id="tabla-responsive">
         <table class="table table-hover table-striped bg-light display" id="usuarios">
             <thead>
