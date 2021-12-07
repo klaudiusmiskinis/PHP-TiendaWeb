@@ -1,22 +1,66 @@
 
+
+<?php function countRolAdmins($conexion) { ?>
+    <?php $stats = $conexion -> adminRolStats(); ?>
+    <div class="card shadow-sm border-color p-3 mb-2">
+        <div class="justify-content-between">
+            <h5>Cantidad de administradores</h5>
+        </div>
+        <h3 class="heading">
+            <i class="bi bi-award text-danger"></i>
+            <?php echo $stats['admins']; ?>
+        </h3>
+    </div>
+<?php } ?>
+
 <?php function countUsers($conexion) { ?>
     <?php $stats = $conexion -> userStats(); ?>
-    <div class="card p-3 mb-2">
-        <div class="d-flex justify-content-between">
-            <div class="d-flex flex-row align-items-center">
-                <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
-                <div class="ms-2 c-details">
-                    <h6 class="mb-0">Cantidad de usuarios</h6>
-                </div>
-            </div>
+    <div class="card shadow-sm border-color p-3 mb-2">
+        <div class="justify-content-between">
+            <h5>Cantidad de usuarios registrados</h5>
         </div>
-        <div class="mt-5">
-            <h3 class="heading"><?php echo $stats['usuarios']; ?></h3>
-            <div class="mt-5">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
+        <h3 class="heading">
+            <i class="bi bi-person-plus-fill text-warning"></i>
+            <?php echo $stats['usuarios']; ?>
+        </h3>
+    </div>
+<?php } ?>
+
+<?php function countRolUsers($conexion) { ?>
+    <?php $stats = $conexion -> userRolStats(); ?>
+    <div class="card shadow-sm border-color p-3 mb-2">
+        <div class="justify-content-between">
+            <h5>Cantidad de usuarios registrados</h5>
         </div>
+        <h3 class="heading">
+        <i class="bi bi-person-fill text-success"></i>
+            <?php echo $stats['usuarios']; ?>
+        </h3>
+    </div>
+<?php } ?>
+
+<?php function maxIdStats($conexion) { ?>
+    <?php $stats = $conexion -> maxId(); ?>
+    <div class="card shadow-sm border-color p-3 mb-2">
+        <div class="justify-content-between">
+            <h5>Número próximo id</h5>
+        </div>
+        <h3 class="heading">
+        <i class="bi bi-star text-warning"></i>
+            <?php echo ($stats['id'] + 1); ?>
+        </h3>
+    </div>
+<?php } ?>
+
+<?php function usuariosOff($conexion) { ?>
+    <?php $stats = $conexion -> maxId(); ?>
+    <div class="card shadow-sm border-color p-3 mb-2">
+        <div class="justify-content-between">
+            <h5>Usuarios deshabilitados</h5>
+        </div>
+        <h3 class="heading">
+        <i class="bi bi-person-x-fill text-danger"></i>
+            <?php echo 0 ?>
+        </h3>
     </div>
 <?php } ?>
