@@ -46,7 +46,7 @@
             <h5>Número próximo id</h5>
         </div>
         <h3 class="heading">
-        <i class="bi bi-star text-warning"></i>
+        <i class="bi bi-plus-circle-dotted text-warning"></i>
             <?php echo ($stats['id'] + 1); ?>
         </h3>
     </div>
