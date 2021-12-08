@@ -5,5 +5,5 @@
     <script src="../scripts/jquery.dataTables.min.js"></script>
     <script src="../scripts/parametros.js?v=<?php echo time(); ?>"></script>
     <script src="../scripts/animacion.js?v=<?php echo time(); ?>"></script>
-    <script src="../scripts/ordenar.js?v=<?php echo time(); ?>"></script>
+    <script src="../scripts/table.js?v=<?php echo time(); ?>"></script>
 <?php } ?> 
