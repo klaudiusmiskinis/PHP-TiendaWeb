@@ -123,10 +123,10 @@
             if ($result->num_rows == 0) {
                     $query = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `rol`, `avatar`) VALUES ('$nombre','$email','$password', '$rol', '$avatar')";
                 if ($this -> getConexion()->query($query)) {
-                    $url = '../vistas/usuario-admin.php?registrado=correcto';
+                    $url = '../vistas/usuario.php?registrado=correcto';
                 }
             } else {
-                $url = '../vistas/usuario-admin.php?error=existe';
+                $url = '../vistas/usuario.php?error=existe';
             }
             return $url;
         }
@@ -135,14 +135,14 @@
         {
             $query = "UPDATE `usuario` SET `nombre`='$nombre',`email`='$email',`password`='$password', `rol`='$rol' WHERE id = $id";
             $this -> getConexion()->query($query);
-            return '../vistas/usuario-admin.php';
+            return '../vistas/usuario.php';
         }
 
         public function deleteUsuario($id) 
         {
             $query = "DELETE FROM `usuario` WHERE id = $id";
             $this -> getConexion()->query($query);
-            return '../vistas/usuario-admin.php';
+            return '../vistas/usuario.php';
         }
 
         public function adminUsuariosSelectAll() 
