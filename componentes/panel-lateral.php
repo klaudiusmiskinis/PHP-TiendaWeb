@@ -26,7 +26,7 @@
                     </div>
                     <div class="collapse" id="desplegar-usuarios">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn-color bg-opacity-50 shadow" href="./usuario-admin.php">Gestionar usuarios</a>
+                            <a class="btn btn-color shadow" href="./usuario.php">Gestionar usuarios</a>
                             <hr>
                         </div>
                     </div>
