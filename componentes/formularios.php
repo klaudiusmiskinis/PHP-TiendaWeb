@@ -105,7 +105,7 @@
                 </div>
                 <div class="row m-2 gap-2">
                     <div class="col d-grid">
-                        <a class="btn btn-color" type="button" href="./usuario-admin.php">Volver a los usuarios</a>
+                        <a class="btn btn-color" type="button" href="./usuario.php">Volver a los usuarios</a>
                     </div>
                 </div>
             </form>
