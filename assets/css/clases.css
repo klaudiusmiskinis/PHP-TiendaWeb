@@ -85,12 +85,3 @@
 .border-color {
     border-color: var(--col) !important;
 }
-
-.card {
-    transition: 0.3s;
-}
-
-.card:hover{
-    margin-top: -3px;
-    transition: 0.3s;
-}
