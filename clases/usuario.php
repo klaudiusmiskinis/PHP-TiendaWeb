@@ -13,7 +13,7 @@
         {
             $this -> id = $id;
             $this -> nombre = $nombre;
-            $this -> email = $nombre;
+            $this -> email = $email;
             $this -> password = $password;
             $this -> avatar = $avatar;
             $this -> rol = $rol;
