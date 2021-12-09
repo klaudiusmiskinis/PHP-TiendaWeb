@@ -34,41 +34,35 @@
             </div>
             <div class="col-8">
                 <div class="row">
-                    <div class="col">
-                        <form action="nombre-usuario.php" method="POST">
-                            <div class="d-grid col-11 mx-auto">
+                    <form action="nombre-usuario.php" method="POST">
+                        <div class="d-grid col-11 mx-auto">
+                        <div class="input-group my-3">
+                                <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>" autocomplete="off">
+                                <button class="btn btn-color my-1" type="submit">Cambiar nombre</button>
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+                <div class="row">
+                    <form action="password-usuario.php" method="POST">
+                        <div class="d-grid col-11 mx-auto">
+                            <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña" autocomplete="off">
+                            <div class="input-group">
+                                <input type="password" name="password-two" id="password-two" class="form-control my-1" placeholder="Vuelve a introducir tu nueva contraseña" autocomplete="off">
+                                <button class="btn btn-color my-1" type="submit">Cambiar contraseña</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <form action="imagen-usuario.php" enctype="multipart/form-data">
+                        <div class="d-grid col-11 mx-auto">
                             <div class="input-group my-3">
-                                    <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>" autocomplete="off">
-                                    <button class="btn btn-color my-1" type="submit">Cambiar nombre</button>
-                                </div>
+                                <input type="file" name="imagenPerfil" id="imagenPerfil" class="form-control">
+                                <button type="submit" class="input-group-text btn btn-color" for="imagenPerfil">Cambiar imagen</button>
                             </div>
-                        </form> 
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <form class="row" action="password-usuario.php" method="POST">
-                            <div class="d-grid col-11 mx-auto">
-                                <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña" autocomplete="off">
-                                <div class="input-group">
-                                    <input type="password" name="password-two" id="password-two" class="form-control my-1" placeholder="Vuelve a introducir tu nueva contraseña" autocomplete="off">
-                                    <button class="btn btn-color my-1" type="submit">Cambiar contraseña</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <form class="row" action="imagen-usuario.php" enctype="multipart/form-data">
-                            <div class="d-grid col-11 mx-auto">
-                                <div class="input-group my-3">
-                                    <input type="file" name="imagenPerfil" id="imagenPerfil" class="form-control">
-                                    <button type="submit" class="input-group-text btn btn-color" for="imagenPerfil">Cambiar imagen</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>   
