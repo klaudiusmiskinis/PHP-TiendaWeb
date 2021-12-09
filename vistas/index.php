@@ -33,7 +33,7 @@
     <!-- REGISTER -->
     <div class='container-fluid' id='container-register'>
         <div class='row justify-content-center mt-5'>
-            <div class='col-sm-4'>
+            <div class='col-lg-4'>
                 <div class='text-center text-dark'>
                     <form id="formRegister" class='card border-0 m-3 p-5 shadow' action="../php/insert-register.php" method="POST">
                         <h1 class="text-color">Register</h1>
