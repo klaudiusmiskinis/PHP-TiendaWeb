@@ -39,8 +39,8 @@
                     <form action="nombre-usuario.php" method="POST">
                         <div class="d-grid col-11 mx-auto">
                         <div class="input-group my-3">
-                                <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>" autocomplete="off">
-                                <button class="btn btn-color my-1" type="submit">Cambiar nombre</button>
+                                <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>" autocomplete="off" required>
+                                <button type="submit" class="btn btn-color my-1">Cambiar nombre</button>
                             </div>
                         </div>
                     </form> 
@@ -48,20 +48,20 @@
                 <div class="row">
                     <form action="password-usuario.php" method="POST">
                         <div class="d-grid col-11 mx-auto">
-                            <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña" autocomplete="off">
+                            <input type="password" name="password-one" id="password-one" class="form-control my-1" placeholder="Introduce la nueva contraseña" autocomplete="off" required>
                             <div class="input-group">
-                                <input type="password" name="password-two" id="password-two" class="form-control my-1" placeholder="Vuelve a introducir tu nueva contraseña" autocomplete="off">
-                                <button class="btn btn-color my-1" type="submit">Cambiar contraseña</button>
+                                <input type="password" name="password-two" id="password-two" class="form-control my-1" placeholder="Vuelve a introducir tu nueva contraseña" autocomplete="off" required>
+                                <button type="submit" id="form-password-user" class="btn btn-color my-1" >Cambiar contraseña</button>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="row">
-                    <form action="update-img.php" enctype="multipart/form-data">
+                    <form action="../php/update-perfil.php" method="POST" enctype="multipart/form-data">
                         <div class="d-grid col-11 mx-auto">
                             <div class="input-group my-3">
-                                <input type="file" name="imagenPerfil" id="imagenPerfil" class="form-control">
-                                <button type="submit" class="input-group-text btn btn-color" for="imagenPerfil">Cambiar imagen</button>
+                                <input accept="image/png" type="file" name="imagenPerfil" id="imagenPerfil" class="form-control" required>
+                                <button type="submit" name="form-img-user" class="input-group-text btn btn-color">Cambiar imagen</button>
                             </div>
                         </div>
                     </form>
