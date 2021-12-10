@@ -18,6 +18,7 @@
     <?php componenteNavbar($_SESSION['nombre']); ?>
     <div class="container-fluid">
         <div class="row">
+
             <div class="col-4">
                 <div class="d-grid text-center">
                     <div class="card mt-3 text-center">
@@ -32,6 +33,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-8">
                 <div class="row">
                     <form action="nombre-usuario.php" method="POST">
@@ -55,7 +57,7 @@
                     </form>
                 </div>
                 <div class="row">
-                    <form action="imagen-usuario.php" enctype="multipart/form-data">
+                    <form action="update-img.php" enctype="multipart/form-data">
                         <div class="d-grid col-11 mx-auto">
                             <div class="input-group my-3">
                                 <input type="file" name="imagenPerfil" id="imagenPerfil" class="form-control">
