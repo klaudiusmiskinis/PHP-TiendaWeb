@@ -191,5 +191,11 @@
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
+
+        public function updateImagePerfil($email, $avatar) 
+        {
+            $query = "UPDATE `usuario` SET `avatar`= $avatar WHERE `email` = '$email'";
+            mysqli_query($this -> getConexion(), $query);
+        }
     }
 ?>
