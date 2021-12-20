@@ -19,22 +19,26 @@
 <body>
 
     <?php componenteNavbar($usuario -> getNombre()); ?>
-    <div class="container-fluid">
-        <div class="row bg-color rounded my-1">
-            <?php tablaCategoria($conexion -> getConexion()); ?>
+
+    <div class="container-fluid mt-2">
+        <div class="row text-end">
+            <div class="col">
+                <button class="btn btn-color" data-bs-toggle="modal" data-bs-target="#formModalCrearCategoria">
+                    <i class="bi bi-boxes"></i>
+                    Crear una categoria
+                </button>
+            </div>
         </div>
-    </div>
+    </div> 
 
     <div class="container-fluid">
-        <div class="row bg-color rounded my-1">
-            <div class="col p-2 d-grid gap-2">
-                <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#formModalCrearUsuario">Crear un usuario</button>
-            </div>
+        <div class="row rounded my-1">
+            <?php tablaCategoria($conexion); ?>
         </div>
     </div>
 
     <?php modalCerrar(); ?>
-    <?php formModalCrearUsuario(); ?>
+    <?php formCrearCategoria(); ?>
     <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
     <?php componenteScripts(); ?>
 
