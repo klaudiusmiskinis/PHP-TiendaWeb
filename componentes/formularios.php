@@ -41,10 +41,10 @@
     </div>
 <?php } ?>
 
-<?php function formCreateCategoria() { ?>
+<?php function formCrearCategoria() { ?>
     <div class="modal fade" id="formModalCrearCategoria" tabindex="-1">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content bg-color">
+            <div class="modal-content">
                 <div class="modal-header border-bottom border-light text-center justify-content-center">
                     <h5 class="modal-title text-dark">Crear una nueva categoria</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -54,6 +54,9 @@
                         <div class="form-floating mb-3">
                             <input type="text" minlength="4" maxlength="70" name="nombre-categoria" class="form-control text-dark" autocomplete="off" required>
                             <label for="nombre">Nombre de la categoria</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-color">Crear</button>
                         </div>
                     </form>
                 </div>
@@ -106,6 +109,36 @@
                 <div class="row m-2 gap-2">
                     <div class="col d-grid">
                         <a class="btn btn-color" type="button" href="./usuario.php">Volver a los usuarios</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php } ?>
+
+<?php function formModificarCategoria($categoria) { ?>
+    <div class="container-fluid mt-2">
+        <div class="row border border-color rounded p-2">
+            <h5 class="text-color m-2">
+                Formulario de actualización del usuario <?php echo $categoria['nombre']; ?>
+            </h5>
+            <form action="../php/update-categoria.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $categoria['id']; ?>">
+                <div class="form-floating m-2">
+                    <input type="text" name="nombre" class="form-control text-dark" minlength="4" maxlength="35" value="<?php echo $categoria['nombre']; ?>" autocomplete="off" required>
+                    <label for="nombre">Nombre de la categoria</label>
+                </div>
+                <div class="row m-2 gap-2">
+                    <div class="col d-grid">
+                        <button type="submit" class="btn btn-color">Actualizar categoria</button>
+                    </div>
+                    <div class="col d-grid">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-eliminar-categoria">Eliminar categoria</button>
+                    </div>
+                </div>
+                <div class="row m-2 gap-2">
+                    <div class="col d-grid">
+                        <a class="btn btn-color" type="button" href="./categoria-admin.php">Volver a las categorias</a>
                     </div>
                 </div>
             </form>
