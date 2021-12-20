@@ -12,15 +12,16 @@
     include('../componentes/panel-lateral.php');
     include('../componentes/modal.php');
     include('../componentes/tabla.php');
+    include('../database/conexion.php');
     componenteHead('ADMIN | Categorias');
     $usuario = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['email'], $_SESSION['password'], $_SESSION['avatar'], $_SESSION['rol']);
 ?>
 <body>
-    <?php componenteNavbar($usuario -> getNombre()); ?>
 
+    <?php componenteNavbar($usuario -> getNombre()); ?>
     <div class="container-fluid">
         <div class="row bg-color rounded my-1">
-            <?php tablaCategoria(); ?>
+            <?php tablaCategoria($conexion -> getConexion()); ?>
         </div>
     </div>
 
@@ -36,4 +37,5 @@
     <?php formModalCrearUsuario(); ?>
     <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
     <?php componenteScripts(); ?>
+
 </body>

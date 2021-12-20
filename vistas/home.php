@@ -5,7 +5,6 @@
         exit();
     }
     include('../clases/usuario.php');
-    
     include('../componentes/scripts.php');
     include('../componentes/navbar.php');
     include('../componentes/head.php');

@@ -43,19 +43,19 @@ function tablaUsuarios($conexion) { ?>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th class="border-bottom border-end border-dark text-center">Configuración</th>
+                    <th>Configuración</th>
                 </tr>
             </thead>
             <tbody>
                 <?php  
                     $listado = $conexion -> adminCategoriasSelectAll();
-                    while ($resultado = mysqli_fetch_array($listado)) { 
+                    while ($row = mysqli_fetch_array($listado)) { 
                 ?>
                 <tr>
-                    <td><?php echo $resultado['id']; ?></td>
-                    <td><?php echo $resultado['nombre']; ?></td>
+                    <td><?php echo $row['id']; ?></td>
+                    <td><?php echo $row['nombre']; ?></td>
                     <td class="text-center">
-                        <a class="text-dark" href="./modificar-categoria.php?id=<?php echo $resultado['id']; ?>">
+                        <a class="text-dark" href="./modificar-categoria.php?id=<?php echo $row['id']; ?>">
                             <i class="bi bi-wrench icono"></i>
                         </a>
                     </td>
