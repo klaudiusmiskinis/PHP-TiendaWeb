@@ -3,7 +3,7 @@
 function tablaUsuarios($conexion) { ?>
     <div class="table-responsive border-bottom border-color p-1" id="tabla-responsive">
         <table class="table text-center display" id="usuarios">
-            <thead>
+            <thead class="border-transparent">
                 <tr class="border-transparent">
                     <th>ID</th>
                     <th>Nombre</th>
@@ -38,24 +38,24 @@ function tablaUsuarios($conexion) { ?>
 
 <?php function tablaCategoria($conexion) { ?>
     <div class="table-responsive text-dark" id="tabla-responsive">
-        <table class="table table-hover table-striped bg-light display" id="usuarios">
+        <table class="table table-hover table-striped bg-light display" id="categorias">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Configuración</th>
+                    <th class="border-bottom border-end border-dark text-center">Configuración</th>
                 </tr>
             </thead>
             <tbody>
                 <?php  
                     $listado = $conexion -> adminCategoriasSelectAll();
-                    while ($row = mysqli_fetch_array($listado)) { 
+                    while ($resultado = mysqli_fetch_array($listado)) { 
                 ?>
                 <tr>
-                    <td><?php echo $row['id']; ?></td>
-                    <td><?php echo $row['nombre']; ?></td>
+                    <td><?php echo $resultado['id']; ?></td>
+                    <td><?php echo $resultado['nombre']; ?></td>
                     <td class="text-center">
-                        <a class="text-dark" href="./modificar-categoria.php?id=<?php echo $row['id']; ?>">
+                        <a class="text-dark" href="./modificar-categoria.php?id=<?php echo $resultado['id']; ?>">
                             <i class="bi bi-wrench icono"></i>
                         </a>
                     </td>
