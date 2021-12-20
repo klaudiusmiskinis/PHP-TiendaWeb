@@ -1,5 +1,4 @@
 <?php 
-
 function tablaUsuarios($conexion) { ?>
     <div class="table-responsive border-bottom border-color p-1" id="tabla-responsive">
         <table class="table text-center display" id="usuarios">
@@ -43,7 +42,7 @@ function tablaUsuarios($conexion) { ?>
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th class="border-bottom border-end border-dark text-center">Configuración</th>
+                    <th class="text-center">Configuración</th>
                 </tr>
             </thead>
             <tbody>
@@ -55,7 +54,7 @@ function tablaUsuarios($conexion) { ?>
                     <td><?php echo $resultado['id']; ?></td>
                     <td><?php echo $resultado['nombre']; ?></td>
                     <td class="text-center">
-                        <a class="text-dark" href="./modificar-categoria.php?id=<?php echo $resultado['id']; ?>">
+                        <a class="text-color text-center" href="./modificar-categoria.php?id=<?php echo $resultado['id']; ?>">
                             <i class="bi bi-wrench icono"></i>
                         </a>
                     </td>
