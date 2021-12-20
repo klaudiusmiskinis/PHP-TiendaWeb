@@ -19,7 +19,7 @@
         header("Location: index.php");
         exit();
     }
-    echo $conexion -> selectUserById(11);
+    $conexion -> selectUserById($id);
     componenteHead('ADMIN | Modificar usuario');
 ?>
 <body>
