@@ -106,7 +106,7 @@
             $query = "SELECT email FROM usuario WHERE email = '$email'";
             $result = $this -> getConexion()->query($query);
             if ($result->num_rows == 0) {
-                    $query = "INSERT INTO `usuario`(`nombre`, `email`, `password`) VALUES ('$nombre','$email','$password')";
+                    $query = "INSERT INTO usuario(nombre, email, password) VALUES ('$nombre','$email','$password')";
                 if ($this -> getConexion()->query($query)) {
                     $url = '../vistas/index.php?registrado=correcto';
                 }
@@ -121,7 +121,7 @@
             $query = "SELECT email FROM usuario WHERE email = '$email'";
             $result = $this -> getConexion()->query($query);
             if ($result->num_rows == 0) {
-                    $query = "INSERT INTO `usuario`(`nombre`, `email`, `password`, `rol`, `avatar`) VALUES ('$nombre','$email','$password', '$rol', '$avatar')";
+                    $query = "INSERT INTO usuario(nombre, email, password, rol, avatar) VALUES ('$nombre','$email','$password', '$rol', '$avatar')";
                 if ($this -> getConexion()->query($query)) {
                     $url = '../vistas/usuario.php?registrado=correcto';
                 }
@@ -131,18 +131,48 @@
             return $url;
         }
 
+        public function insertCategoria($nombre)
+        {
+            $url = '../vistas/categoria-admin.php';
+            $query = "SELECT nombre FROM categoria WHERE categoria = '$nombre'";
+            $result = $this -> getConexion()->query($query);
+            echo $nombre;
+            if ($result->num_rows == 0) {
+                    $query = "INSERT INTO categorias(nombre) VALUES ('$nombre')";
+                    echo $query;
+                if ($this -> getConexion()->query($query)) {
+                    return $url;
+                }
+            }
+            return $url;
+        }
+
         public function updateUsuario($id, $nombre, $email, $password, $rol) 
         {
-            $query = "UPDATE `usuario` SET `nombre`='$nombre',`email`='$email',`password`='$password', `rol`='$rol' WHERE id = $id";
+            $query = "UPDATE usuario SET nombre='$nombre',email='$email',password='$password', rol='$rol' WHERE id = $id";
             $this -> getConexion()->query($query);
             return '../vistas/usuario.php';
         }
 
+        public function updateCategoria($id, $nombre) 
+        {
+            $query = "UPDATE categorias SET nombre='$nombre' WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/categoria-admin.php';
+        }
+
         public function deleteUsuario($id) 
         {
-            $query = "DELETE FROM `usuario` WHERE id = $id";
+            $query = "DELETE FROM usuario WHERE id = $id";
             $this -> getConexion()->query($query);
             return '../vistas/usuario.php';
+        }
+
+        public function deleteCategoria($id) 
+        {
+            $query = "DELETE FROM categorias WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/categoria-admin.php';
         }
 
         public function adminUsuariosSelectAll() 
@@ -164,23 +194,44 @@
             return $resultado -> fetch_assoc();
         }
 
+        public function selectCategoriaById($id) 
+        {
+            $query = "SELECT * FROM categorias WHERE id = $id";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
+
+        public function selectSubcategoriaById($id) 
+        {
+            $query = "SELECT * FROM subcategoria WHERE id = $id";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
+
+        public function selectProductoById($id) 
+        {
+            $query = "SELECT * FROM productos WHERE id = $id";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
+
         public function userStats()
         {
-            $query = "SELECT COUNT(id) usuarios FROM `usuario`";
+            $query = "SELECT COUNT(id) usuarios FROM usuario";
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
 
         public function adminRolStats()
         {
-            $query = "SELECT COUNT(*) admins FROM `usuario` WHERE rol = 'admin'";
+            $query = "SELECT COUNT(*) admins FROM usuario WHERE rol = 'admin'";
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
 
         public function userRolStats()
         {
-            $query = "SELECT COUNT(*) usuarios FROM `usuario` WHERE rol = 'user'";
+            $query = "SELECT COUNT(*) usuarios FROM usuario WHERE rol = 'user'";
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
@@ -194,7 +245,7 @@
 
         public function updateImagePerfil($email, $avatar) 
         {
-            $query = "UPDATE `usuario` SET `avatar`= $avatar WHERE `email` = '$email'";
+            $query = "UPDATE usuario SET avatar= $avatar WHERE email = '$email'";
             mysqli_query($this -> getConexion(), $query);
         }
     }
