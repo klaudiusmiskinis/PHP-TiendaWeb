@@ -8,7 +8,7 @@ $(document).ready( function () {
     $('select').addClass('bg-light');
     $('.paginate_button').addClass('btn btn-color');
     $('.dataTables_info').addClass('float-start');
-    $('.current').addClass('mx-1');
+    $('.paginate_button').addClass('mx-1');
     /* USUARIOS */
     $('#usuarios_filter').addClass('text-color');
     $('#usuarios_length').hide();
@@ -23,7 +23,7 @@ $(document).ready( function () {
     $('#categorias_filter').addClass('text-color');
     $('#categorias_length').hide();
     $('#categorias_info').hide();
-    $('#categorias_paginate').hide();
+    $('#categorias_paginate').show();
     /* EventListener */
     $('#tabla-responsive').on('DOMSubtreeModified', function(){
         $('#usuarios_paginate').show();
@@ -32,7 +32,7 @@ $(document).ready( function () {
         $('.paginate_button').addClass('btn btn-color');
         $('.dataTables_paginate').addClass('pagination pagination-sm');
         $('.dataTables_paginate').removeClass('dataTables_paginate paging_simple_numbers');
-        $('.current').addClass('mx-1');
+        $('.paginate_button').addClass('mx-1');
     });
 });
 
