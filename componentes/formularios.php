@@ -65,7 +65,7 @@
     </div>
 <?php } ?>
 
-<?php function formCrearSubcategoria() { ?>
+<?php function formCrearSubcategoria($conexion) { ?>
     <div class="modal fade" id="formModalCrearSubcategoria" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -80,7 +80,14 @@
                             <label for="nombre-subcategoria">Nombre de la subcategoria</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" name="categoria" class="form-control text-dark" autocomplete="off" required>
+                            <select name="categoria">
+                                <?php
+                                    $listado = $conexion -> adminCategoriasSelectAll();
+                                    while ($resultado = mysqli_fetch_array($listado)) { 
+                                ?>
+                                    <option value="<?php echo $resultado['id'] ?>"><?php echo $resultado['nombre'] ?></option>
+                                <?php } ?>
+                            </select>
                             <label for="categoria">Categoria de la subcategoria</label>
                         </div>
                         <div class="d-grid">
@@ -93,7 +100,7 @@
     </div>
 <?php } ?>
 
-<?php function formModalCrearProducto() { ?>
+<?php function formModalCrearProducto($conexion) { ?>
     <div class="modal fade" id="formModalCrearProducto" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -132,15 +139,29 @@
                             <input type="file" name="imagen" class="form-control text-dark" accept="image/*" autocomplete="off" required>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" name="idCategoria" class="form-control text-dark" autocomplete="off" required>
+                            <select name="idCategoria">
+                                <?php
+                                    $listado = $conexion -> adminCategoriasSelectAll();
+                                    while ($resultado = mysqli_fetch_array($listado)) { 
+                                ?>
+                                    <option value="<?php echo $resultado['id'] ?>"><?php echo $resultado['nombre'] ?></option>
+                                <?php } ?>
+                            </select>
                             <label for="idCategoria">Categoria del nuevo producto</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="number" name="idSubcategoria" class="form-control text-dark" autocomplete="off" required>
+                            <select name="idSubcategoria">
+                                <?php
+                                    $listado = $conexion -> adminSubcategoriaSelectAll();
+                                    while ($resultado = mysqli_fetch_array($listado)) { 
+                                ?>
+                                    <option value="<?php echo $resultado['id'] ?>"><?php echo $resultado['nombre'] ?></option>
+                                <?php } ?>
+                            </select>
                             <label for="idSubcategoria">Subcategoria del nuevo producto</label>
                         </div>
                         <div class="d-grid">
-                            <button type="submit"  class="btn btn-color">Crear producto</button>
+                            <button type="submit" class="btn btn-color">Crear producto</button>
                         </div>
                     </form>
                 </div>
