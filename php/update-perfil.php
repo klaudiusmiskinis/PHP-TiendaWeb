@@ -12,8 +12,13 @@
         $url = $conexion -> updateImagePerfil($email, $base64);
         $_SESSION['avatar'] = $base64;
         header('Location:'.$url);
-    }
-    elseif (isset($_POST['form-password-user'])) {
+    } elseif (isset($_POST['cambiarNombre'])){
+        $id = $_POST['id'];
+        $nombre = $conexion -> prevenirInyeccion($_POST['nombre-nuevo']);
+        $_SESSION['nombre'] = $_POST['nombre-nuevo'];
+        $url = $conexion -> updateNombre($nombre, $id);
+        header('Location:'.$url);
+    } elseif (isset($_POST['form-password-user'])) {
         $id = $_POST['id'];
         $password =  $_POST['password-one'];
         $passwordRepetir = $_POST['password-two'];
@@ -22,11 +27,6 @@
             $url = $conexion -> updatePassword($password, $id);
             header('Location:'.$url);
         }
-    } elseif (isset($_POST['cambiarNombre'])){
-        $id = $_POST['id'];
-        $nombre = $conexion -> prevenirInyeccion($_POST['nombre-nuevo']);
-        $url = $conexion -> updateNombre($nombre, $id);
-        header('Location:'.$url);
-    }
+    } 
         
 ?>
