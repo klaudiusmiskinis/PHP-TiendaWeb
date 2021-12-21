@@ -325,5 +325,12 @@
             mysqli_query($this -> getConexion(), $query);
             return '../vistas/perfil.php';
         }
+
+        public function updateNombre($nombre, $id) 
+        {
+            $query = "UPDATE usuario SET password = '$nombre' WHERE id = '$id'";
+            mysqli_query($this -> getConexion(), $query);
+            return '../vistas/perfil.php';
+        }
     }
 ?>
