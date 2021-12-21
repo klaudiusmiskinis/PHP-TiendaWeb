@@ -38,7 +38,7 @@
     </div>
 
     <?php modalCerrar(); ?>
-    <?php formCrearSubcategoria(); ?>
+    <?php formCrearSubcategoria($conexion); ?>
     <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
     <?php componenteScripts(); ?>
 
