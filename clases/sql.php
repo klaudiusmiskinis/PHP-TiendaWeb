@@ -331,5 +331,12 @@
             mysqli_query($this -> getConexion(), $query);
             return '../vistas/perfil.php';
         }
+
+        public function getProductosHome($id)
+        {
+            $query = "SELECT * FROM productos WHERE id = $id";
+            $resultado = mysqli_query($this -> getConexion(), $query);
+            return $resultado -> fetch_assoc();
+        }
     }
 ?>
