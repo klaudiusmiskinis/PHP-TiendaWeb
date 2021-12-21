@@ -11,23 +11,6 @@
     };
 }(jQuery));
 
-document.onreadystatechange = function(e) {
-    if (document.readyState === 'complete') {
-        $('nav').invisible();
-        $('#container-register').hide();
-        $('#navegador').hide();
-    };
-};
-
-window.onload = function(e) {
-    $('#container-login').slideDown();
-    $('#navegador').fadeIn(500, function(){
-        $('nav').hide();
-        $('nav').visible();
-        $('nav').fadeIn(300);
-    });
-};
-
 $('#offcanvasWithBackdrop').on('click', function() {
     $('#offcanvasWithBackdrop').slideDown();
 });
