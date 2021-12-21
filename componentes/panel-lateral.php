@@ -39,7 +39,7 @@
                     </div>
                     <div class="collapse" id="desplegar-productos">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn-color shadow">Gestionar productos</a>
+                            <a class="btn btn-color shadow" href="./producto-admin.php">Gestionar productos</a>
                             <hr>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="collapse" id="desplegar-subcategorias">
                         <div class="container-fluid d-grid gap-1 mt-1">
-                            <a class="btn btn-color shadow">Gestionar subcategorias</a>
+                            <a class="btn btn-color shadow" href="./subcategoria-admin.php">Gestionar subcategorias</a>
                             <hr>
                         </div>
                     </div>
