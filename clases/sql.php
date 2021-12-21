@@ -89,6 +89,7 @@
             if (password_verify($password, $row['password'])) {
                 session_start();
                 $url = '../vistas/home.php';
+                $_SESSION['carrito'] = [];
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['nombre'] = $row['nombre'];
                 $_SESSION['email'] = $row['email'];
