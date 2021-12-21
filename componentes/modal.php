@@ -76,3 +76,31 @@
         </div>
     </div>
 <?php } ?>
+
+<?php function modalConfirmarEliminarProducto($producto) { ?>
+    <div class="modal fade" id="modal-eliminar-producto" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content border-0 border-color border-bottom border-3">
+                <div class="modal-header bg-color text-light text-center justify-content-center">
+                    <h5 class="modal-title">Confirmar eliminar producto</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <h6>¿Estás seguro de querer eliminar <?php echo $producto['nombre'] ?>?</h6>
+                    <div class="col mt-2">
+                        <form class="border-0 justify-content-center" action="../php/delete-usuario.php" method="POST">
+                            <input type="hidden" name="idDelete" value="<?php echo $producto['id']; ?>">
+                            <div class="row gap-2">
+                                <div class="col d-grid">
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                                </div>
+                                <div class="col d-grid">
+                                    <button type="button" class="btn btn-color" data-bs-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
