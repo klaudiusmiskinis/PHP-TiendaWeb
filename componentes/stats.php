@@ -52,8 +52,7 @@
     </div>
 <?php } ?>
 
-<?php function usuariosOff($conexion) { ?>
-    <?php $stats = $conexion -> maxId(); ?>
+<?php function usuariosOff() { ?>
     <div class="card shadow-sm border-color p-3 mb-2">
         <div class="justify-content-between">
             <h5>Usuarios deshabilitados</h5>
