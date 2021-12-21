@@ -38,7 +38,7 @@
     </div>
 
     <?php modalCerrar(); ?>
-    <?php formModalCrearProducto(); ?>
+    <?php formModalCrearProducto($conexion); ?>
     <?php componentePanel($usuario -> getNombre(), $usuario -> getRol()); ?>
     <?php componenteScripts(); ?>
 
