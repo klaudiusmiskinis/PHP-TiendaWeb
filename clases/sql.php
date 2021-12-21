@@ -137,7 +137,6 @@
             $result = $this -> getConexion()->query($query);
             if ($result->num_rows == 0) {
                     $query = "INSERT INTO `productos`(`nombre`, `tipo`, `peso`, `precio`, `fechaIntroducido`, `marca`, `imagen`, `idCategoria`, `idSubcategoria`) VALUES ('$nombre', '$tipo', '$peso', $precio, '$fechaIntroducido', '$marca', '$imagen', $idCategoria, $idSubcategoria)";
-                    echo $query;
                 if ($this -> getConexion()->query($query)) {
                     $url = '../vistas/producto-admin.php';
                 }
