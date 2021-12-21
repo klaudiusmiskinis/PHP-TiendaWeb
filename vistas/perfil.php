@@ -37,10 +37,11 @@
 
             <div class="col-8 mt-3">
                 <div class="row">
-                    <form action="nombre-usuario.php" method="POST">
+                    <form action="../php/update-perfil.php" method="POST">
                         <div class="d-grid col-11 mx-auto">
-                        <label class="text-color">Cambio de contraseña</label>
+                        <label class="text-color">Cambio de nombre</label>
                         <div class="input-group mb-3">
+                                <input type="hidden" name="id" value="<?php echo $usuario -> getId(); ?>">
                                 <input type="text" name="nombre-nuevo" id="nombre-nuevo" class="form-control my-1" placeholder="<?php echo $_SESSION['nombre']; ?>" autocomplete="off" required>
                                 <button type="submit" name="cambiarNombre" class="btn btn-color my-1">Cambiar nombre</button>
                             </div>
@@ -81,7 +82,6 @@
             </div>
         </div>   
     </div>
-    
     <?php componentePanel($_SESSION['nombre'], $_SESSION['rol']); ?>
     <?php modalCerrar(); ?>
     <?php componenteScripts(); ?>
