@@ -22,7 +22,11 @@
             $url = $conexion -> updatePassword($password, $id);
             header('Location:'.$url);
         }
-
+    } elseif (isset($_POST['cambiarNombre'])){
+        $id = $_POST['id'];
+        $nombre = $conexion -> prevenirInyeccion($_POST['nombre-nuevo']);
+        $url = $conexion -> updateNombre($nombre, $id);
+        header('Location:'.$url);
     }
         
 ?>
