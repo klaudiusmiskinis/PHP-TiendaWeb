@@ -161,6 +161,21 @@
             return $url;
         }
 
+        public function insertSubcategoria($nombre, $categoria)
+        {
+            $url = '../vistas/subcategoria-admin.php';
+            $query = "SELECT nombre FROM subcategoria WHERE categoria = '$nombre'";
+            $result = $this -> getConexion()->query($query);
+            if ($result->num_rows == 0) {
+                    $query = "INSERT INTO subcategorias(nombre, idCategoria) VALUES ('$nombre', $categoria)";
+                    echo $query;
+                if ($this -> getConexion()->query($query)) {
+                    return $url;
+                }
+            }
+            return $url;
+        }
+
         public function updateUsuario($id, $nombre, $email, $password, $rol) 
         {
             $query = "UPDATE usuario SET nombre='$nombre',email='$email',password='$password', rol='$rol' WHERE id = $id";
@@ -173,6 +188,13 @@
             $query = "UPDATE categorias SET nombre='$nombre' WHERE id = $id";
             $this -> getConexion()->query($query);
             return '../vistas/categoria-admin.php';
+        }
+
+        public function updateSubcategoria($id, $nombre, $idCategoria) 
+        {
+            $query = "UPDATE subcategorias SET nombre='$nombre', idCategoria = $idCategoria WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/subcategoria-admin.php';
         }
 
         public function updateProducto($id, $nombre, $tipo, $peso, $precio, $fechaIntroducido, $marca, $imagen, $idCategoria, $idSubcategoria)
@@ -189,11 +211,25 @@
             return '../vistas/usuario.php';
         }
 
+        public function deleteProducto($id) 
+        {
+            $query = "DELETE FROM productos WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/producto-admin.php';
+        }
+
         public function deleteCategoria($id) 
         {
             $query = "DELETE FROM categorias WHERE id = $id";
             $this -> getConexion()->query($query);
             return '../vistas/categoria-admin.php';
+        }
+
+        public function deleteSubcategoria($id) 
+        {
+            $query = "DELETE FROM subcategorias WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/subcategoria-admin.php';
         }
 
         public function adminUsuariosSelectAll() 
@@ -236,7 +272,7 @@
 
         public function selectSubcategoriaById($id) 
         {
-            $query = "SELECT * FROM subcategoria WHERE id = $id";
+            $query = "SELECT * FROM subcategorias WHERE id = $id";
             $resultado = mysqli_query($this -> getConexion(), $query);
             return $resultado -> fetch_assoc();
         }
