@@ -96,7 +96,7 @@ function tablaUsuarios($conexion) { ?>
                     <td><?php echo $resultado['precio']; ?></td>
                     <td><?php echo $resultado['fechaIntroducido']; ?></td>
                     <td><?php echo $resultado['marca']; ?></td>
-                    <td>file/img</td>
+                    <td><img src="<?php echo $resultado['imagen']; ?>" width="50" class="img-fluid"></td>
                     <td><?php echo $resultado['idCategoria']; ?></td>
                     <td><?php echo $resultado['idSubcategoria']; ?></td>
                     <td class="text-center">
