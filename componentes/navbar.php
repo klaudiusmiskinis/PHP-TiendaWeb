@@ -10,14 +10,11 @@
             </a>
         </div>
         <div class="d-flex">
-            <a class="nav-link text-decoration" id="item-productos" href="./ofertas.php">
+            <a class="nav-link text-decoration" id="item-productos" href="./productos.php">
                 <i class="bi bi-bag-fill icono"></i>
             </a>
             <a class="nav-link" id="item-home" href="./home.php">
                 <i class="bi bi-house icono"></i>
-            </a>
-            <a class="nav-link" id="item-ofertas" href="./ofertas.php">
-                <i class="bi bi-tags-fill icono"></i>
             </a>
         </div>
     </nav>
