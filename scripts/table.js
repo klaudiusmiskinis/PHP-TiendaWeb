@@ -7,8 +7,11 @@ $(document).ready( function () {
     $('input').addClass('bg-light');
     $('select').addClass('bg-light');
     $('.paginate_button').addClass('btn btn-color');
+    $('.current').addClass('btn-primary');
+    $('.current').removeClass('btn-color');
     $('.dataTables_info').addClass('float-start');
     $('.paginate_button').addClass('mx-1');
+    
     /* USUARIOS */
     $('#usuarios_filter').addClass('text-color');
     $('#usuarios_length').hide();
@@ -24,6 +27,7 @@ $(document).ready( function () {
     $('#categorias_length').hide();
     $('#categorias_info').hide();
     $('#categorias_paginate').show();
+    
     /* EventListener */
     $('#tabla-responsive').on('DOMSubtreeModified', function(){
         $('#usuarios_paginate').show();
@@ -33,6 +37,8 @@ $(document).ready( function () {
         $('.dataTables_paginate').addClass('pagination pagination-sm');
         $('.dataTables_paginate').removeClass('dataTables_paginate paging_simple_numbers');
         $('.paginate_button').addClass('mx-1');
+        $('.current').addClass('btn-primary');
+        $('.current').removeClass('btn-color');
     });
 });
 
