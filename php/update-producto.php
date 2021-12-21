@@ -9,7 +9,7 @@
         $precio = $conexion -> prevenirInyeccion($_POST['precio']);
         $fechaIntroducido = $conexion -> prevenirInyeccion($_POST['fechaIntroducido']);
         $marca = $conexion -> prevenirInyeccion($_POST['marca']);
-        if ($_FILES['imagen']['size'] == 0) {
+        if ($_FILES['imagen']['tmp_name']) {
             $imagen = file_get_contents($_FILES['imagen']['tmp_name']);
             $imagen = 'data:image/*;base64,'.base64_encode($imagen);
         } else {

@@ -315,7 +315,7 @@
                     <label for="fechaIntroducido">Fecha del nuevo producto</label>
                 </div>
                 <div class="form-floating m-2">
-                    <input type="text" name="marca" class="form-control text-dark" minlength="10" value="<?php echo $producto['marca']; ?>" autocomplete="off" required>
+                    <input type="text" name="marca" class="form-control text-dark" minlength="3" value="<?php echo $producto['marca']; ?>" autocomplete="off" required>
                     <label for="marca">Marca del nuevo producto</label>
                 </div>
                 <div class="mb-3 text-start bg-light rounded">
