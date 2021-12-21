@@ -2,15 +2,27 @@
 <?php 
     require_once '../database/conexion.php';
     session_start();
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['form-img-user'])) {
         $email = $_SESSION["email"];
         $avatar = addslashes(file_get_contents($_FILES['imagenPerfil']['tmp_name']));
-        $conexion -> updateImagePerfil($email, $avatar);
         $path = $_FILES['imagenPerfil']['tmp_name'];
         $type = pathinfo($path);
         $data = file_get_contents($path);
-        $base64 = 'data:image/png;base64,' . base64_encode($data);
-        // $_SESSION['avatar'] = $base64;
-        header('Location: ../vistas/perfil.php');
-    }    
+        $base64 = 'data:image/*;base64,' . base64_encode($data);
+        $url = $conexion -> updateImagePerfil($email, $base64);
+        $_SESSION['avatar'] = $base64;
+        header('Location:'.$url);
+    }
+    elseif (isset($_POST['form-password-user'])) {
+        $id = $_POST['id'];
+        $password =  $_POST['password-one'];
+        $passwordRepetir = $_POST['password-two'];
+        if ($password === $passwordRepetir) {
+            $password = $conexion -> prevenirInyeccion(mysqli_real_escape_string($conexion -> getConexion(), password_hash($_POST['password-one'], PASSWORD_BCRYPT, [10])));
+            $url = $conexion -> updatePassword($password, $id);
+            header('Location:'.$url);
+        }
+
+    }
+        
 ?>
