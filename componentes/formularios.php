@@ -66,7 +66,7 @@
 <?php } ?>
 
 <?php function formCrearSubcategoria() { ?>
-    <div class="modal fade" id="formModalCrearCategoria" tabindex="-1">
+    <div class="modal fade" id="formModalCrearSubcategoria" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header border-bottom border-light text-center justify-content-center">
@@ -76,12 +76,12 @@
                 <div class="modal-body border-bottom border-light text-center">
                     <form action="../php/insert-subcategoria.php" method="POST">
                         <div class="form-floating mb-3">
-                            <input type="text" minlength="4" maxlength="70" name="nombre-categoria" class="form-control text-dark" autocomplete="off" required>
-                            <label for="nombre">Nombre de la subcategoria</label>
+                            <input type="text" minlength="4" maxlength="70" name="nombre-subcategoria" class="form-control text-dark" autocomplete="off" required>
+                            <label for="nombre-subcategoria">Nombre de la subcategoria</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" minlength="4" maxlength="70" name="nombre-categoria" class="form-control text-dark" autocomplete="off" required>
-                            <label for="nombre">Categoria de la subcategoria</label>
+                            <input type="number" name="categoria" class="form-control text-dark" autocomplete="off" required>
+                            <label for="categoria">Categoria de la subcategoria</label>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-color">Crear subcategoria</button>
@@ -223,6 +223,41 @@
                 <div class="row m-2 gap-2">
                     <div class="col d-grid">
                         <a class="btn btn-color" type="button" href="./categoria-admin.php">Volver a las categorias</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+<?php } ?>
+
+
+<?php function formModificarSubcategoria($subcategoria) { ?>
+    <div class="container-fluid mt-2">
+        <div class="row border border-color rounded p-2">
+            <h5 class="text-color m-2">
+                Formulario de actualización del usuario <?php echo $subcategoria['nombre']; ?>
+            </h5>
+            <form action="../php/update-subcategoria.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $subcategoria['id']; ?>">
+                <div class="form-floating m-2">
+                    <input type="text" name="nombre" class="form-control text-dark" minlength="4" maxlength="35" value="<?php echo $subcategoria['nombre']; ?>" autocomplete="off" required>
+                    <label for="nombre">Nombre de la subcategoria</label>
+                </div>
+                <div class="form-floating m-2">
+                    <input type="number" name="idCategoria" class="form-control text-dark" minlength="4" maxlength="35" value="<?php echo $subcategoria['idCategoria']; ?>" autocomplete="off" required>
+                    <label for="idCategoria">Id de la categoria</label>
+                </div>
+                <div class="row m-2 gap-2">
+                    <div class="col d-grid">
+                        <button type="submit" class="btn btn-color">Actualizar subcategoria</button>
+                    </div>
+                    <div class="col d-grid">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-eliminar-subcategoria">Eliminar subcategoria</button>
+                    </div>
+                </div>
+                <div class="row m-2 gap-2">
+                    <div class="col d-grid">
+                        <a class="btn btn-color" type="button" href="./subcategoria-admin.php">Volver a las categorias</a>
                     </div>
                 </div>
             </form>
