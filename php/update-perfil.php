@@ -2,7 +2,7 @@
 <?php 
     require_once '../database/conexion.php';
     session_start();
-    if (isset($_POST['form-img-user'])) {
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_SESSION["email"];
         $avatar = addslashes(file_get_contents($_FILES['imagenPerfil']['tmp_name']));
         $conexion -> updateImagePerfil($email, $avatar);
