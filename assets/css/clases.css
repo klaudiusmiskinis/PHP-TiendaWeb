@@ -1,3 +1,7 @@
+.hide {
+    display: none !important;
+}
+
 .svg {
     fill: var(--b);
     transition: 0.4s;
