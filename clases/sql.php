@@ -131,12 +131,26 @@
             return $url;
         }
 
+        public function insertProducto($nombre, $tipo, $peso, $precio, $fechaIntroducido, $marca, $imagen, $idCategoria, $idSubcategoria)
+        {
+            $query = "SELECT nombre FROM productos WHERE nombre = '$nombre'";
+            $result = $this -> getConexion()->query($query);
+            if ($result->num_rows == 0) {
+                    $query = "INSERT INTO `productos`(`nombre`, `tipo`, `peso`, `precio`, `fechaIntroducido`, `marca`, `imagen`, `idCategoria`, `idSubcategoria`) VALUES ('$nombre', '$tipo', '$peso', $precio, '$fechaIntroducido', '$marca', '$imagen', $idCategoria, $idSubcategoria)";
+                    echo $query;
+                if ($this -> getConexion()->query($query)) {
+                    $url = '../vistas/producto-admin.php';
+                }
+            $url = '../vistas/producto-admin.php';
+            }
+            return $url;
+        }
+
         public function insertCategoria($nombre)
         {
             $url = '../vistas/categoria-admin.php';
             $query = "SELECT nombre FROM categoria WHERE categoria = '$nombre'";
             $result = $this -> getConexion()->query($query);
-            echo $nombre;
             if ($result->num_rows == 0) {
                     $query = "INSERT INTO categorias(nombre) VALUES ('$nombre')";
                     echo $query;
@@ -159,6 +173,13 @@
             $query = "UPDATE categorias SET nombre='$nombre' WHERE id = $id";
             $this -> getConexion()->query($query);
             return '../vistas/categoria-admin.php';
+        }
+
+        public function updateProducto($id, $nombre, $tipo, $peso, $precio, $fechaIntroducido, $marca, $imagen, $idCategoria, $idSubcategoria)
+        {
+            $query = "UPDATE productos SET nombre='$nombre',`tipo`='$tipo',`peso`='$peso',`precio`= $precio,`fechaIntroducido`='$fechaIntroducido',`marca`='$marca',`imagen`='$imagen',`idCategoria`=$idCategoria,`idSubcategoria`=$idSubcategoria WHERE id = $id";
+            $this -> getConexion()->query($query);
+            return '../vistas/producto-admin.php';
         }
 
         public function deleteUsuario($id) 
@@ -184,6 +205,18 @@
         public function adminCategoriasSelectAll() 
         {
             $query = "SELECT id, nombre FROM categorias ORDER BY id";
+            return mysqli_query($this -> getConexion(), $query);
+        }
+
+        public function adminSubcategoriaSelectAll() 
+        {
+            $query = "SELECT * FROM subcategorias ORDER BY id";
+            return mysqli_query($this -> getConexion(), $query);
+        }
+
+        public function adminProductosSelectAll() 
+        {
+            $query = "SELECT id, nombre, tipo, peso, precio, fechaIntroducido, marca, imagen, idCategoria, idSubcategoria FROM productos ORDER BY id";
             return mysqli_query($this -> getConexion(), $query);
         }
 
