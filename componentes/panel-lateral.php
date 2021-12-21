@@ -91,6 +91,9 @@
                     </div>
                     <div class="collapse show" id="desplegar-perfil">
                         <div class="container-fluid d-grid gap-1 mt-1">
+                            <form  action="../php/carrito.php" method="POST" class="d-grid">
+                                <button class="btn btn-color shadow" type="submit" name="limpiar"><i class="bi bi-cart-x me-2"></i>Vaciar carrito</button>
+                            </form>
                             <a href="./perfil.php" class="btn btn-color shadow">Editar perfil</a>
                             <a class="btn btn-danger shadow" data-bs-toggle="modal" data-bs-target="#modal-salir">Cerrar sesión</a>
                         </div>
