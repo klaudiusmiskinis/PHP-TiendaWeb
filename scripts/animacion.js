@@ -11,6 +11,16 @@
     };
 }(jQuery));
 
+document.onreadystatechange = function(e) {
+    if (document.readyState === 'complete') {
+        $('#container-register').hide();
+    };
+};
+
+window.onload = function(e) {
+    $('#container-login').slideDown();
+};
+
 $('#offcanvasWithBackdrop').on('click', function() {
     $('#offcanvasWithBackdrop').slideDown();
 });
