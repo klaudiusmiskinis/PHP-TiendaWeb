@@ -11,6 +11,9 @@
         </div>
         <div class="d-flex">
             <a class="nav-link text-decoration" id="item-productos" href="./productos.php">
+                <i class="bi bi-cart"></i><?php echo count($_SESSION['carrito']); ?>
+            </a>
+            <a class="nav-link text-decoration" id="item-productos" href="./productos.php">
                 <i class="bi bi-bag-fill icono"></i>
             </a>
             <a class="nav-link" id="item-home" href="./home.php">
