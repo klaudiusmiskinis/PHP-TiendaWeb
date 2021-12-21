@@ -314,8 +314,16 @@
 
         public function updateImagePerfil($email, $avatar) 
         {
-            $query = "UPDATE usuario SET avatar= $avatar WHERE email = '$email'";
+            $query = "UPDATE usuario SET avatar = '$avatar' WHERE email = '$email'";
             mysqli_query($this -> getConexion(), $query);
+            return '../vistas/perfil.php';
+        }
+
+        public function updatePassword($password, $id) 
+        {
+            $query = "UPDATE usuario SET password = '$password' WHERE id = '$id'";
+            mysqli_query($this -> getConexion(), $query);
+            return '../vistas/perfil.php';
         }
     }
 ?>
