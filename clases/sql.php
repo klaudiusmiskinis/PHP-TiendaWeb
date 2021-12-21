@@ -328,7 +328,7 @@
 
         public function updateNombre($nombre, $id) 
         {
-            $query = "UPDATE usuario SET password = '$nombre' WHERE id = '$id'";
+            $query = "UPDATE usuario SET nombre = '$nombre' WHERE id = '$id'";
             mysqli_query($this -> getConexion(), $query);
             return '../vistas/perfil.php';
         }
